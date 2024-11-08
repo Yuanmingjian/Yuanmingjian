@@ -1,0 +1,261 @@
+<!DOCTYPE html><html data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>前端学习笔记</title><meta name="author" content="来一份棉花糖"><meta name="copyright" content="来一份棉花糖"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
+<meta property="og:title" content="前端学习笔记">
+<meta property="og:url" content="http://example.com/page/7/index.html">
+<meta property="og:site_name" content="前端学习笔记">
+<meta property="og:locale">
+<meta property="og:image" content="http://example.com/img/%E7%A7%91%E6%AF%94.png">
+<meta property="article:author" content="来一份棉花糖">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/%E7%A7%91%E6%AF%94.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/page/7/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '前端学习笔记',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2024-11-08 17:06:57'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="前端学习笔记" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/%E7%A7%91%E6%AF%94.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">163</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">1</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('/img/1.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="前端学习笔记"><span class="site-name">前端学习笔记</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">前端学习笔记</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover right"><a href="/2023/08/17/nginx%E9%85%8D%E7%BD%AE/" title="部署服务器中 nginx的配置"><img class="post-bg" src="/img/1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="部署服务器中 nginx的配置"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/08/17/nginx%E9%85%8D%E7%BD%AE/" title="部署服务器中 nginx的配置">部署服务器中 nginx的配置</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-08-17T11:39:25.642Z" title="Created 2023-08-17 19:39:25">2023-08-17</time></span></div><div class="content">12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394# For more information on configuration, see:#   * Official English Documentation: http://nginx.org/en/docs/#   * Official Russian Documentation: http://nginx.org/ru/docs/user nginx;worker_processes auto;error_log /var/log/nginx/error.log;pid /run/nginx.pid;# Load dynamic modules. See /usr/share/doc/nginx/README.dynamic ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2023/08/14/%E8%B4%AA%E5%90%83%E8%9B%87/" title="ts 贪吃蛇项目回顾"><img class="post-bg" src="/img/1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="ts 贪吃蛇项目回顾"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/08/14/%E8%B4%AA%E5%90%83%E8%9B%87/" title="ts 贪吃蛇项目回顾">ts 贪吃蛇项目回顾</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-08-14T11:45:07.639Z" title="Created 2023-08-14 19:45:07">2023-08-14</time></span></div><div class="content">1 创建三个类 蛇（蛇头   蛇身体（包括头））       食物（）               积分难度
+2 键盘事件加定时器（递归思想 run里面调定时器回调run）3 判断蛇与食物的坐标相等是  蛇的长度加一 积分加一  
+4 边界判断 蛇不能越出指定范围 在蛇类中set中判断 
+5 蛇身体的移动 从后往前遍历 当前坐标去等于前一个坐标 
+6 掉头 判断蛇头坐标是否等于第二个身体 做相应对策 如正在右走掉头 继续右走
+7 蛇身相撞  遍历判断蛇头于蛇身坐标  
+</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2023/08/12/%E8%B7%A8%E5%9F%9F/" title="跨域配置"><img class="post-bg" src="/img/%E7%BB%88%E6%9E%81.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="跨域配置"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/08/12/%E8%B7%A8%E5%9F%9F/" title="跨域配置">跨域配置</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-08-12T09:32:13.222Z" title="Created 2023-08-12 17:32:13">2023-08-12</time></span></div><div class="content"> vue3 
+ server: {
+  proxy: {
+   &#x2F;&#x2F;通过代理实现跨域
+   “&#x2F;api”: {
+​    target: “http://81.70.228.109:8000&quot;, &#x2F;&#x2F;替换的域名地址
+​    changeOrigin: true, &#x2F;&#x2F;开启代理，表示允许跨域
+​    rewrite: (path) &#x3D;&gt; path.replace(&#x2F;^/api&#x2F;, ‘’)&#x2F;&#x2F;重写路径，替换字符串”&#x2F;path”      &#x2F;&#x2F;&#x2F; vue2 写这个pathRewrite: {‘^&#x2F;api1’: ‘’}},
+   },
+  },
+ },
+</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2023/08/11/ts/" title="ts的一些使用"><img class="post-bg" src="/img/%E7%BB%88%E6%9E%81.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="ts的一些使用"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/08/11/ts/" title="ts的一些使用">ts的一些使用</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-08-11T13:13:38.231Z" title="Created 2023-08-11 21:13:38">2023-08-11</time></span></div><div class="content">3.3 确定赋值断言在 TypeScript 2.7 版本中引入了确定赋值断言，即允许在实例属性和变量声明后面放置一个 ! 号，从而告诉 TypeScript 该属性会被明确地赋值。为了更好地理解它的作用，我们来看个具体的例子：静态编译阶段 无法判断x是否赋值
+12345678typescript复制代码let x: number;initialize();// Variable &#x27;x&#x27; is used before being assigned.(2454)console.log(2 * x); // Errorfunction initialize() &#123;  x = 10;&#125;
+
+很明显该异常信息是说变量 x 在赋值前被使用了，要解决该问题，我们可以使用确定赋值断言： 
+1234567let x!: number;initialize();console.log(2 * x); // Okfunction initialize() &#123;  x = 10;&#125;
+
+通过 let x!: number; 确定赋值断言，TypeScri ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2023/08/09/vue/ref%E5%92%8Creactive/" title="ref和reactive"><img class="post-bg" src="/img/%E7%BB%88%E6%9E%81.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="ref和reactive"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/08/09/vue/ref%E5%92%8Creactive/" title="ref和reactive">ref和reactive</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-08-09T13:07:20.408Z" title="Created 2023-08-09 21:07:20">2023-08-09</time></span></div><div class="content">
+ref解包1. ref在模板中自动解包当ref作为顶层属性在模板中使用时，自动解包，不用.value即可获取值。
+12const count = ref(1);count.value = 2;
+
+直接使用
+1234&lt;!-- count值为2 --&gt;&lt;div&gt;&#123;&#123;count&#125;&#125;&lt;/div&gt;&lt;!-- 正确 --&gt;&lt;div&gt;&#123;&#123;count + 1&#125;&#125;&lt;/div&gt;
+
+若不是顶层属性, 假如值需要逻辑操作，则会出现问题。
+1234567const obj = &#123;    age: ref(1)&#125;&lt;!-- 可以正常显示--&gt;&lt;div&gt;&#123;&#123;obj.age&#125;&#125;&lt;/div&gt;&lt;!-- 会报错  渲染的结果会是一个 [object Object]，因为 obj.age 是一个 ref 对象。需要obj.age.value 才能正常显示--&gt;&lt;di ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2023/08/07/nodejs/%E6%B5%81/" title="node中的流"><img class="post-bg" src="/../../images/back.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="node中的流"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/08/07/nodejs/%E6%B5%81/" title="node中的流">node中的流</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-08-07T12:46:08.945Z" title="Created 2023-08-07 20:46:08">2023-08-07</time></span></div><div class="content">流的介绍在 NodeJS 中，我们对文件的操作需要依赖核心模块 fs，fs 中有很基本 API 可以帮助我们读写占用内存较小的文件，如果是大文件或内存不确定也可以通过 open、read、write、close 等方法对文件进行操作，但是这样操作文件每一个步骤都要关心，非常繁琐，fs 中提供了可读流和可写流，让我们通过流来操作文件，方便我们对文件的读取和写入。
+可读流1、createReadStream 创建可读流createReadStream 方法有两个参数，第一个参数是读取文件的路径，第二个参数为 options 选项，其中有八个参数：
+
+flags：标识位，默认为 r；
+encoding：字符编码，默认为 null；
+fd：文件描述符，默认为 null；
+mode：权限位，默认为 0o666；
+autoClose：是否自动关闭文件，默认为 true；
+start：读取文件的起始位置；
+end：读取文件的（包含）结束位置；
+highWaterMark：最大读取文件的字节数，默认 64 * 1024。
+
+createReadStream 的返回值为 fs.ReadStream 对象 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2023/08/07/nodejs/%E5%8F%AF%E8%AF%BB%E6%B5%81/" title="node中的可读流"><img class="post-bg" src="/../../images/back.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="node中的可读流"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/08/07/nodejs/%E5%8F%AF%E8%AF%BB%E6%B5%81/" title="node中的可读流">node中的可读流</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-08-07T12:01:44.939Z" title="Created 2023-08-07 20:01:44">2023-08-07</time></span></div><div class="content">在Node.js中，Readable Stream 是一个抽象的基类，用于表示可读数据的源。fs.createReadStream() 是一个特定的可读流，用于从文件系统中读取数据。
+下面是 Readable 和 createReadStream() 的主要区别：
+
+类型：
+Readable 是一个抽象类，它是可读流的基类。可以通过继承 Readable 类来创建自定义的可读流。
+createReadStream() 是一个函数，用于创建一个特定类型的可读流，从文件系统中读取数据。
+
+
+数据源：
+Readable 可以从任何数据源中读取数据，例如网络请求、内存缓冲区或其他流，也可以通过重写 _read() 方法来实现自定义数据源。
+createReadStream() 专门用于从文件系统中读取数据，它会打开指定的文件并读取其中的内容。
+
+
+参数：
+Readable 类的构造函数不接收任何参数，需要通过继承并重写相关方法来实现自定义的可读流。
+createReadStream() 接收文件路径作为参数，以便打开指定的文件并读取其中的数据。
+
+
+用法：
+使用 Readable 类时，需要手 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2023/08/06/nodejs/%E4%BA%8B%E4%BB%B6%E7%8E%AF/" title="Node的事件环"><img class="post-bg" src="/../../images/back.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Node的事件环"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/08/06/nodejs/%E4%BA%8B%E4%BB%B6%E7%8E%AF/" title="Node的事件环">Node的事件环</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-08-06T07:28:52.758Z" title="Created 2023-08-06 15:28:52">2023-08-06</time></span></div><div class="content">学Node,你不可能不知道Node的事件环吧Sandy
+2020-12-13 23:46347
+1.概述
+和浏览器中一样NodeJS中也有事件环(Event Loop)
+但是由于执行代码的宿主环境和应用场景不同
+所以两者的事件环也有所不同
+
+2.NodeJS事件环和浏览器事件环区别2.1任务队列个数不同
+浏览器事件环有2个事件队列(宏任务队列和微任务队列)
+NodeJS事件环有6个事件队列
+
+12345678910111213141516171819index.js复制代码    ┌───────────────────────┐┌&gt; │timers          │执行setTimeout() 和 setInterval()中到期的callback│  └──────────┬────────────┘│  ┌──────────┴────────────┐│  │pending callbacks│执行系统操作的回调, 如:tcp, udp通信的错误callback│  └──────────┬────────────┘│  ┌──────────┴─────────── ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2023/08/05/es6/Object%20created/" title="详解Object.create(null)"><img class="post-bg" src="/img/%E7%BB%88%E6%9E%81.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="详解Object.create(null)"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/08/05/es6/Object%20created/" title="详解Object.create(null)">详解Object.create(null)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-08-05T08:09:43.401Z" title="Created 2023-08-05 16:09:43">2023-08-05</time></span></div><div class="content">详解Object.create(null)const me &#x3D; Object.create(person); &#x2F;&#x2F;   me.proto &#x3D;&#x3D;&#x3D; person
+
+在Vue和Vuex的源码中，作者都使用了Object.create(null)来初始化一个新对象。为什么不用更简洁的&#123;&#125;呢？
+在SegmentFault和Stack Overflow等开发者社区中也有很多人展开了讨论，在这里总结成文，温故知新。
+
+Object.create()的定义照搬一下MDN上的定义：
+12css复制代码Object.create(proto,[propertiesObject])
+
+
+proto:新创建对象的原型对象
+propertiesObject:可选。要添加到新对象的可枚举（新添加的属性是其自身的属性，而不是其原型链上的属性）的属性。
+
+举个例子(恶改了一下MDN的官方例子，看懂的点赞)：
+123456789101112131415161718192021222324252627282930javascript复制代码 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2023/08/05/es6/new%E4%B8%80%E4%B8%AA%E5%AE%9E%E4%BE%8B/" title="new的过程"><img class="post-bg" src="/img/%E7%BB%88%E6%9E%81.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="new的过程"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/08/05/es6/new%E4%B8%80%E4%B8%AA%E5%AE%9E%E4%BE%8B/" title="new的过程">new的过程</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-08-05T07:10:36.436Z" title="Created 2023-08-05 15:10:36">2023-08-05</time></span></div><div class="content">模拟实现当代码 new Foo(...) 执行时，会发生以下事情：
+
+一个继承自 Foo.prototype 的新对象被创建。
+使用指定的参数调用构造函数 Foo ，并将 this 绑定到新创建的对象。new Foo 等同于 new Foo()，也就是没有指定参数列表，Foo 不带任何参数调用的情况。
+由构造函数返回的对象就是 new 表达式的结果。如果构造函数没有显式返回一个对象，则使用步骤1创建的对象。
+
+说到这里就要聊聊 new 的实现了，实现代码如下。
+12345678910111213// 木易杨function create() &#123;	// 1、创建一个空的对象    var obj = new Object(),	// 2、获得构造函数，同时删除 arguments 中第一个参数    Con = [].shift.call(arguments);	// 3、链接到原型，obj 可以访问构造函数原型中的属性    Object.setPrototypeOf(obj, Con.prototype);	// 4、绑定 this 实现继承，obj 可以访问到构造函数中的 ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/6/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/#content-inner">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/#content-inner">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/#content-inner">17</a><a class="extend next" rel="next" href="/page/8/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/%E7%A7%91%E6%AF%94.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">来一份棉花糖</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">163</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/10/18/react/useReducer/" title="No title"><img src="/img/1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="No title"/></a><div class="content"><a class="title" href="/2024/10/18/react/useReducer/" title="No title">No title</a><time datetime="2024-10-18T08:27:18.199Z" title="Created 2024-10-18 16:27:18">2024-10-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/10/11/react/react%E7%9A%84%E5%89%AF%E4%BD%9C%E7%94%A8/" title="No title"><img src="/img/1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="No title"/></a><div class="content"><a class="title" href="/2024/10/11/react/react%E7%9A%84%E5%89%AF%E4%BD%9C%E7%94%A8/" title="No title">No title</a><time datetime="2024-10-11T09:56:31.020Z" title="Created 2024-10-11 17:56:31">2024-10-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/09/25/css/%E4%B8%80%E8%A1%8C%E4%BB%A3%E7%A0%81%E5%93%8D%E5%BA%94%E5%BC%8F/" title="一行代码响应式"><img src="/img/1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="一行代码响应式"/></a><div class="content"><a class="title" href="/2024/09/25/css/%E4%B8%80%E8%A1%8C%E4%BB%A3%E7%A0%81%E5%93%8D%E5%BA%94%E5%BC%8F/" title="一行代码响应式">一行代码响应式</a><time datetime="2024-09-25T02:58:32.507Z" title="Created 2024-09-25 10:58:32">2024-09-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/09/25/Untitled/" title="No title"><img src="/img/1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="No title"/></a><div class="content"><a class="title" href="/2024/09/25/Untitled/" title="No title">No title</a><time datetime="2024-09-25T02:58:25.176Z" title="Created 2024-09-25 10:58:25">2024-09-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/07/14/07-12/" title="No title"><img src="/img/1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="No title"/></a><div class="content"><a class="title" href="/2024/07/14/07-12/" title="No title">No title</a><time datetime="2024-07-14T14:07:25.103Z" title="Created 2024-07-14 22:07:25">2024-07-14</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>Categories</span>
+            
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/"><span class="card-category-list-name">web前端</span><span class="card-category-list-count">4</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/es/" style="font-size: 1.1em; color: #999">es</a> <a href="/tags/vue/" style="font-size: 1.5em; color: #99a9bf">vue</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span><a class="card-more-btn" href="/archives/" title="More">
+    <i class="fas fa-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/10/"><span class="card-archive-list-date">October 2024</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/09/"><span class="card-archive-list-date">September 2024</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/07/"><span class="card-archive-list-date">July 2024</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/05/"><span class="card-archive-list-date">May 2024</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/04/"><span class="card-archive-list-date">April 2024</span><span class="card-archive-list-count">9</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/03/"><span class="card-archive-list-date">March 2024</span><span class="card-archive-list-count">16</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/02/"><span class="card-archive-list-date">February 2024</span><span class="card-archive-list-count">6</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/01/"><span class="card-archive-list-date">January 2024</span><span class="card-archive-list-count">6</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">163</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Push :</div><div class="item-count" id="last-push-date" data-lastPushDate="2024-11-08T09:06:57.177Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By 来一份棉花糖</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-heart.min.js" async="async" mobile="false"></script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-show-text.min.js" data-mobile="false" data-text="I,LOVE,YOU" data-fontsize="15px" data-random="true" async="async"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html><html data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>前端学习笔记</title><meta name="author" content="来一份棉花糖"><meta name="copyright" content="来一份棉花糖"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
+<meta property="og:title" content="前端学习笔记">
+<meta property="og:url" content="http://example.com/page/6/index.html">
+<meta property="og:site_name" content="前端学习笔记">
+<meta property="og:locale">
+<meta property="og:image" content="http://example.com/img/%E7%A7%91%E6%AF%94.png">
+<meta property="article:author" content="来一份棉花糖">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/%E7%A7%91%E6%AF%94.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/page/6/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '前端学习笔记',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2024-11-08 17:06:57'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="前端学习笔记" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/%E7%A7%91%E6%AF%94.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">163</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">1</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('/img/1.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="前端学习笔记"><span class="site-name">前端学习笔记</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">前端学习笔记</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover right"><a href="/2023/10/25/%E9%9D%A2%E7%BB%8F/%E9%9D%A2%E8%AF%95/" title="No title"><img class="post-bg" src="/img/1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="No title"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/10/25/%E9%9D%A2%E7%BB%8F/%E9%9D%A2%E8%AF%95/" title="No title">No title</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-10-25T10:01:19.117Z" title="Created 2023-10-25 18:01:19">2023-10-25</time></span></div><div class="content">
+title： 面试记录北京小程序
+1 介绍下你自己和你的项目
+2 遇到的难点
+3 vue中封装一个通用组件的策略或者理念
+4 vue3的生命周期相对vue2的变化
+5 css作用域 如何区分单个组件 全局组件
+6 对原生微信小程序的理解和掌握程度
+7 数据加载慢，页面加载慢的一些处理方式
+传音控股   地点变更＋钱太少   ×
+基础vue
+合肥数据院    一面过  等通知
+基础项目问题 
+基础js 
+基础的vue
+武汉
+http是什么 如何理解
+https
+tcp和udp
+三次挥手
+闭包
+虚拟dom
+new一个实例
+各种定位
+隐藏dom
+js数据类型
+项目遇到的问题
+返回的错误报错
+404是什么 如何解决
+</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2023/10/22/vue/%E7%BB%84%E4%BB%B6/%E5%B0%81%E8%A3%85%E7%80%91%E5%B8%83%E6%B5%81/" title="封装瀑布流"><img class="post-bg" src="/img/1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="封装瀑布流"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/10/22/vue/%E7%BB%84%E4%BB%B6/%E5%B0%81%E8%A3%85%E7%80%91%E5%B8%83%E6%B5%81/" title="封装瀑布流">封装瀑布流</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-10-22T07:37:01.053Z" title="Created 2023-10-22 15:37:01">2023-10-22</time></span></div><div class="content">12345678910111213141516171819202122232425262728293031323334353637&lt;template&gt;&lt;div class=&quot;con&quot;  :style=&quot;&#123; width: `$&#123;appWidth&#125;px`, hight: `$&#123;appHight&#125;px` &#125;&quot;&gt;  &lt;Waterfall&gt;    &lt;item v-for=&quot;(item, index) in 50&quot; :key=&quot;index&quot;&gt;        &lt;img :src=&quot;&#x27;https://picsum.photos/id/&#x27;+getRandomWidth()+ &#x27;/200/&#x27;+getRandomWidth()+&#x27;?grayscale&#x27;&quot; alt=&quot;&quot;&gt;    &lt;/item&gt;    & ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2023/10/08/leetcode/%E4%B8%8D%E5%90%8C%E8%B7%AF%E5%BE%84/" title="No title"><img class="post-bg" src="/img/1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="No title"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/10/08/leetcode/%E4%B8%8D%E5%90%8C%E8%B7%AF%E5%BE%84/" title="No title">No title</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-10-08T14:32:14.416Z" title="Created 2023-10-08 22:32:14">2023-10-08</time></span></div><div class="content">12345678910111213141516171819202122232425262728/**     * 1. 确定dp数组下标含义 dp[i][j] 到每一个坐标可能的路径种类     * 2. 递推公式 dp[i][j] = dp[i-1][j] dp[i][j-1]     * 3. 初始化 dp[i][0]=1 dp[0][i]=1 初始化横竖就可     * 4. 遍历顺序 一行一行遍历     * 5. 推导结果 。。。。。。。。     *     * @param m     * @param n     * @return     */    public static int uniquePaths(int m, int n) &#123;        int[][] dp = new int[m][n];        //初始化        for (int i = 0; i &lt; m; i++) &#123;            dp[i][0] = 1;        &#125;        for (int i = 0; i &lt; ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2023/10/06/es6/class%E5%92%8Cfunction%E6%9E%84%E9%80%A0%E7%B1%BB%E7%9A%84%E5%8C%BA%E5%88%AB/" title="class和function构造类的区别."><img class="post-bg" src="/img/1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="class和function构造类的区别."></a></div><div class="recent-post-info"><a class="article-title" href="/2023/10/06/es6/class%E5%92%8Cfunction%E6%9E%84%E9%80%A0%E7%B1%BB%E7%9A%84%E5%8C%BA%E5%88%AB/" title="class和function构造类的区别.">class和function构造类的区别.</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-10-06T08:38:40.310Z" title="Created 2023-10-06 16:38:40">2023-10-06</time></span></div><div class="content">1 类的所有代码都在严格模式下执行  函数的this不是windows
+   注意 ：  类中方法的this 不是固定的
+​                 以方法形式调用时，this就是当前的实例    xx.fn()  
+​                以函数形式调用是，this是undefined           fn()
+​     解决 使用箭头函数来
+2  类只用new调用 
+3 类的方法都是放在原型上的
+4 类的方法不可枚举  
+ 5 重复定义：function会覆盖之前定义的方法；class会报错
+6、class没有变量提升，function有
+7、class定义的类没有私有方法和私有属性
+8  关于构造器constructor：在function定义的构造函数中，其prototype.constructor属性指向构造器本身，在class定义的类中，constructor其实也相当于定义在prototype属性上。
+</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2023/09/24/bug/loading%E5%8A%A0%E8%BD%BD/" title="loading加载"><img class="post-bg" src="/img/%E7%BB%88%E6%9E%81.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="loading加载"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/09/24/bug/loading%E5%8A%A0%E8%BD%BD/" title="loading加载">loading加载</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-09-24T07:33:34.479Z" title="Created 2023-09-24 15:33:34">2023-09-24</time></span></div><div class="content">为vue-router懒加载时下载js的过程中添加loading提示避免无响应问题 更新时间：2018年04月03日 16:24:30  作者：东篱南山  
+这篇文章主要介绍了为vue-router懒加载时下载js的过程中添加loading提示避免无响应问题,需要的朋友可以参考下
+用过vue-router都知道它可以实现模块js的懒加载，即只有当需要时才去加载对应模块的js脚本文件，以加速主页的显示。比如只有第一次用户点击某个“用户信息”按钮或菜单时，才下载“用户信息”这个模块的js组件。
+懒加载的实现，依赖与webpack下AMD模式require函数的功能。webpack会将异步require的文件生成一个独立的js文件，调用时异步下载这个js且在完成后再执行它。开发项目中实现的关键代码是：
+1const basicInfo = &#123;`` ``path: ``&#x27;/user&#x27;``,`` ``component: resolve =&gt; require([``&#x27;./basicInfo.vue&#x27;``], resolve) ``&#125 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2023/09/14/bug/%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E7%9A%84%E5%8A%A8%E6%80%81%E5%AF%BC%E5%85%A5/" title="静态资源的dong'tai"><img class="post-bg" src="/../../images/%E7%BB%88%E6%9E%81.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="静态资源的dong'tai"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/09/14/bug/%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E7%9A%84%E5%8A%A8%E6%80%81%E5%AF%BC%E5%85%A5/" title="静态资源的dong'tai">静态资源的dong'tai</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-09-14T13:35:07.453Z" title="Created 2023-09-14 21:35:07">2023-09-14</time></span></div><div class="content">来一份棉花糖的主页 - 抖音 (douyin.com)
+vite脚手架的打包 不会给我们打包动态导入的资源  静态资源打包问题  打包路径和源码路径不一致造成
+解决方案 
+1 将src下的assetc文件放到public文件中（此文件会全部打包） 缺点:丢失掉文件指纹
+2 
+
+
+该文件将import的文件打包 缺点会生成大量js文件 造成会发送很多url请求
+3 
+
+
+</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2023/09/11/%E6%9F%AF%E9%87%8C%E5%8C%96%E5%87%BD%E6%95%B0/" title="柯里化函数的使用"><img class="post-bg" src="/img/1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="柯里化函数的使用"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/09/11/%E6%9F%AF%E9%87%8C%E5%8C%96%E5%87%BD%E6%95%B0/" title="柯里化函数的使用">柯里化函数的使用</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-09-11T06:24:34.004Z" title="Created 2023-09-11 14:24:34">2023-09-11</time></span></div><div class="content">概念：将使用多个参数的函数转换成一系列使用一个参数的函数
+闭包在柯里化函数中主要作用就是帮助我们保存已经传入的参数，以便于后续调用时使用。这也是柯里化函数可以实现链式调用的关键所在。
+示例代码（通用）123456789101112function curry(fn) &#123;    let args=[] //收集新的参数  return function curried(...args) &#123;    if (args.length &gt;= fn.length) &#123;      return fn.apply(this, args);    &#125; else &#123;      return function(...newArgs) &#123;        return curried.apply(this, args.concat(newArgs));      &#125;    &#125;  &#125;;&#125;
+
+这个 curry 函数可以接受任意函数作为参数，并返回一个新函数。新函数在接收到足够的参数后，会调用原始函数 fn，否则 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2023/09/06/leetcode/%E6%9C%80%E9%95%BF%E9%80%92%E5%A2%9E%E5%AD%90%E5%BA%8F%E5%88%97/" title="最长递增子序列"><img class="post-bg" src="/../../images/back.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="最长递增子序列"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/09/06/leetcode/%E6%9C%80%E9%95%BF%E9%80%92%E5%A2%9E%E5%AD%90%E5%BA%8F%E5%88%97/" title="最长递增子序列">最长递增子序列</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-09-06T06:52:30.041Z" title="Created 2023-09-06 14:52:30">2023-09-06</time></span></div><div class="content">12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061/** \* @param *&#123;number[]&#125;* *nums* \* @return *&#123;number&#125;* */var lengthOfLIS = function(*nums*) &#123;  if(*nums*.length==0) return 0  const target=[*nums*[0]]  for (let i =1 ; i &lt; *nums*.length; i++)&#123;    if(target[target.length-1]&lt;*nums*[i])&#123;   target.push(*nums*[i])  &#125;  else&#123;   const indexs=findFirst(*nums*[i])   target[indexs]=*nums*[i]  & ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2023/08/31/vue/setup%E4%B8%AD%E7%9A%84defineprops/" title="setup中的defineprops"><img class="post-bg" src="/img/%E7%BB%88%E6%9E%81.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="setup中的defineprops"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/08/31/vue/setup%E4%B8%AD%E7%9A%84defineprops/" title="setup中的defineprops">setup中的defineprops</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-08-31T07:40:19.168Z" title="Created 2023-08-31 15:40:19">2023-08-31</time></span></div><div class="content">运行时声明
+
+/**
+ *  type：参数类型
+ *  required：必须传参（默认：false）
+ *  default：默认值
+ * /
+const props = defineProps({
+  name: {
+    type: String,
+    required: true
+  },
+  title: {
+    type: Number,
+       required: false
+  },
+  status: Boolean
+})
+
+
+
+
+
+
+
+基于类型的声明
+
+/**
+ * 方式一：通过泛型参数
+ */
+const props = defineProps()
+
+/**
+ * 方式二：编写单独接口
+ */
+  interface Props {
+    name?: string,
+    title: number,
+    status?: boolean
+  }
+  const props = defineProps()
+
+// ?代表可选参数 可以不用传
+
+
+
+
+在 Vue 3 中，在 &lt;script setup&gt; 中声明 props 的 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2023/08/28/vue/vmodel/" title="v-model的使用"><img class="post-bg" src="/img/1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="v-model的使用"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/08/28/vue/vmodel/" title="v-model的使用">v-model的使用</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-08-28T06:19:39.356Z" title="Created 2023-08-28 14:19:39">2023-08-28</time></span></div><div class="content">三、Vue3.x 使用 v-modelvue2 中的 v-model 和 .sync 功能重叠，容易混淆，因此 vue3 做了统一，一个组件可以多次使用 v-model 。
+3.1、vue 3 的v-model使用原理：
+1234复制代码&lt;child-comp v-model=&quot;msg&quot; /&gt;   //可翻译为&lt;child-comp :modelValue=&quot;msg&quot; @update:modelValue=&quot;msg=$event&quot; /&gt;  //类似注册了一个update事件 
+
+单个数据双向绑定完整示例
+12345678910111213141516171819202122232425262728//父组件代码&lt;child-comp v-model=&quot;name&quot; /&gt;  子组件代码：&lt;template&gt; &lt;input type=&quot;text&quot; v-model=&quot;newValue&quot;&gt;&lt;/template&g ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/5/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/#content-inner">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/#content-inner">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/#content-inner">17</a><a class="extend next" rel="next" href="/page/7/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/%E7%A7%91%E6%AF%94.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">来一份棉花糖</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">163</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/10/18/react/useReducer/" title="No title"><img src="/img/1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="No title"/></a><div class="content"><a class="title" href="/2024/10/18/react/useReducer/" title="No title">No title</a><time datetime="2024-10-18T08:27:18.199Z" title="Created 2024-10-18 16:27:18">2024-10-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/10/11/react/react%E7%9A%84%E5%89%AF%E4%BD%9C%E7%94%A8/" title="No title"><img src="/img/1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="No title"/></a><div class="content"><a class="title" href="/2024/10/11/react/react%E7%9A%84%E5%89%AF%E4%BD%9C%E7%94%A8/" title="No title">No title</a><time datetime="2024-10-11T09:56:31.020Z" title="Created 2024-10-11 17:56:31">2024-10-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/09/25/css/%E4%B8%80%E8%A1%8C%E4%BB%A3%E7%A0%81%E5%93%8D%E5%BA%94%E5%BC%8F/" title="一行代码响应式"><img src="/img/1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="一行代码响应式"/></a><div class="content"><a class="title" href="/2024/09/25/css/%E4%B8%80%E8%A1%8C%E4%BB%A3%E7%A0%81%E5%93%8D%E5%BA%94%E5%BC%8F/" title="一行代码响应式">一行代码响应式</a><time datetime="2024-09-25T02:58:32.507Z" title="Created 2024-09-25 10:58:32">2024-09-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/09/25/Untitled/" title="No title"><img src="/img/1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="No title"/></a><div class="content"><a class="title" href="/2024/09/25/Untitled/" title="No title">No title</a><time datetime="2024-09-25T02:58:25.176Z" title="Created 2024-09-25 10:58:25">2024-09-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/07/14/07-12/" title="No title"><img src="/img/1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="No title"/></a><div class="content"><a class="title" href="/2024/07/14/07-12/" title="No title">No title</a><time datetime="2024-07-14T14:07:25.103Z" title="Created 2024-07-14 22:07:25">2024-07-14</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>Categories</span>
+            
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/"><span class="card-category-list-name">web前端</span><span class="card-category-list-count">4</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/es/" style="font-size: 1.1em; color: #999">es</a> <a href="/tags/vue/" style="font-size: 1.5em; color: #99a9bf">vue</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span><a class="card-more-btn" href="/archives/" title="More">
+    <i class="fas fa-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/10/"><span class="card-archive-list-date">October 2024</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/09/"><span class="card-archive-list-date">September 2024</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/07/"><span class="card-archive-list-date">July 2024</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/05/"><span class="card-archive-list-date">May 2024</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/04/"><span class="card-archive-list-date">April 2024</span><span class="card-archive-list-count">9</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/03/"><span class="card-archive-list-date">March 2024</span><span class="card-archive-list-count">16</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/02/"><span class="card-archive-list-date">February 2024</span><span class="card-archive-list-count">6</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/01/"><span class="card-archive-list-date">January 2024</span><span class="card-archive-list-count">6</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">163</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Push :</div><div class="item-count" id="last-push-date" data-lastPushDate="2024-11-08T09:06:57.177Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By 来一份棉花糖</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-heart.min.js" async="async" mobile="false"></script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-show-text.min.js" data-mobile="false" data-text="I,LOVE,YOU" data-fontsize="15px" data-random="true" async="async"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

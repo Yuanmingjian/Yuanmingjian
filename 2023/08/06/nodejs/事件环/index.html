@@ -1,0 +1,263 @@
+<!DOCTYPE html><html data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>Node的事件环 | 前端学习笔记</title><meta name="author" content="来一份棉花糖"><meta name="copyright" content="来一份棉花糖"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="学Node,你不可能不知道Node的事件环吧Sandy 2020-12-13 23:46347 1.概述 和浏览器中一样NodeJS中也有事件环(Event Loop) 但是由于执行代码的宿主环境和应用场景不同 所以两者的事件环也有所不同  2.NodeJS事件环和浏览器事件环区别2.1任务队列个数不同 浏览器事件环有2个事件队列(宏任务队列和微任务队列) NodeJS事件环有6个事件队列  12">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Node的事件环">
+<meta property="og:url" content="http://example.com/2023/08/06/nodejs/%E4%BA%8B%E4%BB%B6%E7%8E%AF/index.html">
+<meta property="og:site_name" content="前端学习笔记">
+<meta property="og:description" content="学Node,你不可能不知道Node的事件环吧Sandy 2020-12-13 23:46347 1.概述 和浏览器中一样NodeJS中也有事件环(Event Loop) 但是由于执行代码的宿主环境和应用场景不同 所以两者的事件环也有所不同  2.NodeJS事件环和浏览器事件环区别2.1任务队列个数不同 浏览器事件环有2个事件队列(宏任务队列和微任务队列) NodeJS事件环有6个事件队列  12">
+<meta property="og:locale">
+<meta property="og:image" content="http://example.com/images/back.jpg">
+<meta property="article:published_time" content="2023-08-06T07:28:52.758Z">
+<meta property="article:modified_time" content="2024-04-08T12:04:53.513Z">
+<meta property="article:author" content="来一份棉花糖">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/images/back.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2023/08/06/nodejs/%E4%BA%8B%E4%BB%B6%E7%8E%AF/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Node的事件环',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-04-08 20:04:53'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="前端学习笔记" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/%E7%A7%91%E6%AF%94.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">163</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">1</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/../../images/back.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="前端学习笔记"><span class="site-name">前端学习笔记</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Node的事件环</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2023-08-06T07:28:52.758Z" title="Created 2023-08-06 15:28:52">2023-08-06</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2024-04-08T12:04:53.513Z" title="Updated 2024-04-08 20:04:53">2024-04-08</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Node的事件环"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="学Node-你不可能不知道Node的事件环吧"><a href="#学Node-你不可能不知道Node的事件环吧" class="headerlink" title="学Node,你不可能不知道Node的事件环吧"></a>学Node,你不可能不知道Node的事件环吧</h1><p><a target="_blank" rel="noopener" href="https://juejin.cn/user/1222312662937800/posts">Sandy</a></p>
+<p>2020-12-13 23:46347</p>
+<h2 id="1-概述"><a href="#1-概述" class="headerlink" title="1.概述"></a>1.概述</h2><ul>
+<li>和浏览器中一样NodeJS中也有事件环(Event Loop)</li>
+<li>但是由于执行代码的宿主环境和应用场景不同</li>
+<li>所以两者的事件环也有所不同</li>
+</ul>
+<h2 id="2-NodeJS事件环和浏览器事件环区别"><a href="#2-NodeJS事件环和浏览器事件环区别" class="headerlink" title="2.NodeJS事件环和浏览器事件环区别"></a>2.NodeJS事件环和浏览器事件环区别</h2><h3 id="2-1任务队列个数不同"><a href="#2-1任务队列个数不同" class="headerlink" title="2.1任务队列个数不同"></a>2.1任务队列个数不同</h3><ul>
+<li>浏览器事件环有2个事件队列(宏任务队列和微任务队列)</li>
+<li>NodeJS事件环有6个事件队列</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">index.js复制代码    ┌───────────────────────┐</span><br><span class="line">┌&gt; │timers          │执行setTimeout() 和 setInterval()中到期的callback</span><br><span class="line">│  └──────────┬────────────┘</span><br><span class="line">│  ┌──────────┴────────────┐</span><br><span class="line">│  │pending callbacks│执行系统操作的回调, 如:tcp, udp通信的错误callback</span><br><span class="line">│  └──────────┬────────────┘</span><br><span class="line">│  ┌──────────┴────────────┐</span><br><span class="line">│  │idle, prepare   │只在内部使用</span><br><span class="line">│  └──────────┬────────────┘</span><br><span class="line">│  ┌──────────┴────────────┐</span><br><span class="line">│  │poll            │执行与I/O相关的回调</span><br><span class="line">    │                  (除了close回调、定时器回调和setImmediate()之外，几乎所有回调都执行);</span><br><span class="line">│  └──────────┬────────────┘</span><br><span class="line">│  ┌──────────┴────────────┐</span><br><span class="line">│  │check           │执行setImmediate的callback</span><br><span class="line">│  └──────────┬────────────┘</span><br><span class="line">│  ┌──────────┴────────────┐</span><br><span class="line">└─┤close callbacks │执行close事件的callback，例如socket.on(&quot;close&quot;,func)</span><br><span class="line">    └───────────────────────┘</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-2微任务队列不同"><a href="#2-2微任务队列不同" class="headerlink" title="2.2微任务队列不同"></a>2.2微任务队列不同</h3><ul>
+<li>浏览器事件环中有专门存储微任务的队列</li>
+<li>NodeJS事件环中没有专门存储微任务的队列</li>
+</ul>
+<h3 id="2-3微任务执行时机不同-废除"><a href="#2-3微任务执行时机不同-废除" class="headerlink" title="2.3微任务执行时机不同(废除)"></a>2.3微任务执行时机不同(废除)</h3><ul>
+<li>浏览器事件环中每执行完一个宏任务都会去清空微任务队列</li>
+<li>NodeJS事件环中只有同步代码执行完毕和其它队列之间切换的时候回去清空微任务队列(以前的版本)</li>
+</ul>
+<p><strong>现在</strong></p>
+<p>Node的事件环跟浏览器的事件环基本一致,先执行同步代码,执行完以后就清空微任务队列,清空完以后按照事件环队列的优先级进行执行,每执行完一个宏任务就会去清空微任务队列</p>
+<h3 id="2-4微任务优先级不同"><a href="#2-4微任务优先级不同" class="headerlink" title="2.4微任务优先级不同"></a>2.4微任务优先级不同</h3><ul>
+<li>浏览器事件环中如果多个微任务同时满足执行条件, 采用先进先出</li>
+<li>NodeJS事件环中如果多个微任务同时满足执行条件, 会按照优先级执行</li>
+</ul>
+<p>前面是不是说了常见的微任务有Promise, MutationObserver ,process.nextTick</p>
+<p>但是MutationObserver不属与Node的宏任务,因为这个东西是监听DOM树的变化的,你Node有DOM树吗? 是不是没有,所以Node中常见的宏任务就只有Promise,process.nextTick</p>
+<p>那这两个哪个的优先级要高喃?</p>
+<p>写个代码来看看就清楚了</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">index.js复制代码Promise.resolve().then(function () &#123;</span><br><span class="line">  console.log(&quot;Promise&quot;);</span><br><span class="line">&#125;);</span><br><span class="line">process.nextTick(function () &#123;</span><br><span class="line">  console.log(&quot;process.nextTick1&quot;);</span><br><span class="line">&#125;);</span><br><span class="line">process.nextTick(function () &#123;</span><br><span class="line">  console.log(&quot;process.nextTick2&quot;);</span><br><span class="line">&#125;);</span><br><span class="line">process.nextTick(function () &#123;</span><br><span class="line">  console.log(&quot;process.nextTick3&quot;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>看看结果如何</p>
+<p><img src="/../../images/34d0dc5ae02f44b390ed313dcc026012tplv-k3u1fbpfcp-zoom-in-crop-mark4536000.webp" alt="img"></p>
+<p>由图可知,是不是process.nextTick的优先级比promise的优先级高</p>
+<p>process.nextTick代码执行完&gt;&gt;才会执行promise的代码</p>
+<h2 id="3-完整流程"><a href="#3-完整流程" class="headerlink" title="3.完整流程"></a>3.完整流程</h2><p>先来看两个例子就基本了解Node代码执行的完整流程了</p>
+<p><strong>第一个例子</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">setTimeout(function () &#123;</span><br><span class="line">  console.log(&quot;setTimeout&quot;);</span><br><span class="line">&#125;);</span><br><span class="line">Promise.resolve().then(function () &#123;</span><br><span class="line">  console.log(&quot;Promise&quot;);</span><br><span class="line">&#125;);</span><br><span class="line">console.log(&quot;同步代码 Start&quot;);</span><br><span class="line">process.nextTick(function () &#123;</span><br><span class="line">  console.log(&quot;process.nextTick&quot;);</span><br><span class="line">&#125;);</span><br><span class="line">setImmediate(function () &#123;</span><br><span class="line">  console.log(&quot;setImmediate&quot;);</span><br><span class="line">&#125;);</span><br><span class="line">console.log(&quot;同步代码 End&quot;);</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../../images/53570edc873b491dba743c532ddbddb3tplv-k3u1fbpfcp-zoom-in-crop-mark4536000.webp" alt="img"></p>
+<p>我还是简单来讲解一下</p>
+<p>从上至下执行代码,首先遇到一个setTimeout,这个是不是一个异步代码,setTimeout属于timers队列,就把这个setTimeout放入timers队列</p>
+<p>然后遇到一个Promise,这个是不是也是一个异步代码,Promise是不是微任务,我们就暂时假设一个队列来存放Node的(微任务),把promise放入假设的队列</p>
+<p>然后遇到一个console.log,这个是不是一个同步代码,同步代码是不是立即执行,就输出同步代码Start</p>
+<p>接着遇到一个process.nextTick,这个是不是也是一个异步代码,process.nextTick是不是微任务,把process.nextTick放入假设的队列</p>
+<p>之后遇到一个setImmediate,这个是不是一个异步代码,setImmediate属于check队列,就把setImmediate放入check队列</p>
+<p>最后遇到一个console.log,这个是不是一个同步代码,同步代码是不是立即执行,就输出同步代码End</p>
+<p>上面是不是说了先执行同步代码,同步代码执行完毕以后就会立即执行满足条件的微任务</p>
+<p>这里同步代码是不是都执行完了,然后执行微任务,微任务中有一个promise和nextTick,在浏览器中是不是按照先进先出的原则,但是Node是按照优先级的原则来执行</p>
+<p>前面是不是说过,nextTick的优先级比promsie的优先级高,所以会先执行nextTick代码,是不是就输出了nextTick</p>
+<p>然后执行promise代码,静跟着输出了promise</p>
+<p>微任务执行完毕以后,是不是就会按照Node的事件环的队列顺序来执行,setTimeout是属于timers队列的, setImmediate是属于check队列的,timers队列优先级比check高,就会先执行timers的队列就打印出了setTimeout</p>
+<p>上面是不是说过执行完一个Node事件环中的队列以后,就会去查看微任务是否有满足条件的代码,如果满足就立即执行,不满足就不执行,执行完timers队列以后,微任务是不是没有任务,然后就会跳转到check队列,然后执行check队列,最后打印出setImmediate</p>
+<p>如何验证我的说法</p>
+<p>是不是来看一下执行结果</p>
+<p><img src="/../../images/59f817096033471cafff3599ca727968tplv-k3u1fbpfcp-zoom-in-crop-mark4536000.webp" alt="img"></p>
+<p>是不是就没有任何问题</p>
+<p>下面来看第二个例子</p>
+<p><strong>第二个例子</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">index.js复制代码setTimeout(() =&gt; &#123;</span><br><span class="line"> console.log(&#x27;s1&#x27;);</span><br><span class="line"> Promise.resolve().then(() =&gt; &#123;</span><br><span class="line">   console.log(&#x27;p1&#x27;);</span><br><span class="line"> &#125;)</span><br><span class="line"> process.nextTick(() =&gt; &#123;</span><br><span class="line">   console.log(&#x27;n1&#x27;);</span><br><span class="line"> &#125;)</span><br><span class="line">&#125;)</span><br><span class="line">console.log(&#x27;start&#x27;);</span><br><span class="line">setTimeout(() =&gt; &#123;</span><br><span class="line"> console.log(&#x27;s2&#x27;);</span><br><span class="line"> Promise.resolve().then(() =&gt; &#123;</span><br><span class="line">   console.log(&#x27;p2&#x27;);</span><br><span class="line"> &#125;)</span><br><span class="line"> process.nextTick(() =&gt; &#123;</span><br><span class="line">   console.log(&#x27;n2&#x27;);</span><br><span class="line"> &#125;)</span><br><span class="line">&#125;)</span><br><span class="line">console.log(&#x27;end&#x27;);</span><br></pre></td></tr></table></figure>
+
+<p>我还是简单的讲解一下</p>
+<p>从上至下依次执行</p>
+<p>遇到一个setTimeout,属于异步代码不立即执行,setTimeout属于timers队列,放入timers队列</p>
+<p>遇到console.log,属于同步代码,立即执行,打印start</p>
+<p>又遇到一个setTimeout,属于异步代码不立即执行,setTimeout属于timers队列,放入timers队列</p>
+<p>同步代码执行完毕就回去执行微任务,现在微任务里面没有任务,就会按照事件环的优先级来执行 当前只有一个timers队列就看里面是否有满足的条件的代码,两个是不是都满足根据先进先出的原则,s1先进来就先执行,遇到console.log,属于同步代码,立即执行,打印s1,遇到一个promise,属于异步代码不立即执行,promise属于微任务,假象一个存放微任务的队列把promise存放进去,然后遇到一个nextTick,属于异步代码不立即执行,nextTick属于微任务存放进假象的任务队列,s1就执行完毕了</p>
+<p>s1执行完以后,上面是不是说过,执行完一个队列就会去执行微任务,看微任务里面有没有满足的代码,是不是promise和nextTick都满足,根据优先级的原则,nextTick会先执行,所以静跟着打印n1,之后执行promise,静跟着打印p1</p>
+<p>微任务执行完毕,进行执行timers队列,s1执行完了就只剩s2了,执行s2,遇到console.log,属于同步代码,立即执行,打印s2,遇到一个promise,属于异步代码不立即执行,promise属于微任务,假象一个存放微任务的队列把promise存放进去,然后遇到一个nextTick,属于异步代码不立即执行,nextTick属于微任务存放进假象的任务队列,s2就执行完毕了</p>
+<p>s2执行完以后,上面是不是说过,执行完一个队列就会去执行微任务,看微任务里面有没有满足的代码,是不是promise和nextTick都满足,根据优先级的原则,nextTick会先执行,所以静跟着打印n2,之后执行promise,静跟着打印p2</p>
+<p>怎么验证我的说法?</p>
+<p>是不是看看输出结果</p>
+<p><img src="/../../images/283df34e25994d4184b7f3aeeea250d0tplv-k3u1fbpfcp-zoom-in-crop-mark4536000.webp" alt="img"></p>
+<p>是不是就没有任何问题</p>
+<p><strong>是不是很简单</strong></p>
+<h2 id="4-面试题"><a href="#4-面试题" class="headerlink" title="4.面试题"></a>4.面试题</h2><p><strong>注意点</strong></p>
+<p>当执行以下代码的时候,结果是随机的</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">index.js复制代码setTimeout(() =&gt; &#123;</span><br><span class="line">  console.log(&quot;setTimeout&quot;);</span><br><span class="line">&#125;);</span><br><span class="line">setImmediate(() =&gt; &#123;</span><br><span class="line">  console.log(&quot;setImmediate&quot;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>来看看打印结果</p>
+<p><img src="/../../images/5bd246ea03fc4517a92a8013d54670c2tplv-k3u1fbpfcp-zoom-in-crop-mark4536000.webp" alt="img"></p>
+<p>为什么会这样?</p>
+<p>因为在NodeJS中指定的延迟时间是有一定的误差的, 所以导致了输出结果随机的问题</p>
+<p>我们这里没设置延迟时间是不是就表示延迟0s,因为延迟时间存在一定的误差,是不是可能延迟时间是0.1或者0.2,是不是延迟了就会立即执行下面的代码,这就是为什么存在随机性,有可能会产生误差,有可能不会产生</p>
+<p>当然这不是面试题,只是了解一下</p>
+<p>下面的才是面试题</p>
+<p><strong>面试题</strong></p>
+<p>下面这段代码输出的结果肯定是setImmediate先输出,setTimeout后输出</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">index.js复制代码const path = require(&quot;path&quot;);</span><br><span class="line">const fs = require(&quot;fs&quot;);</span><br><span class="line"></span><br><span class="line">fs.readFile(path.join(__dirname, &quot;04.js&quot;), () =&gt; &#123;</span><br><span class="line">  setTimeout(() =&gt; &#123;</span><br><span class="line">    console.log(&quot;setTimeout&quot;);</span><br><span class="line">  &#125;);</span><br><span class="line">  setImmediate(() =&gt; &#123;</span><br><span class="line">    console.log(&quot;setImmediate&quot;);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>来看看打印结果</p>
+<p><img src="/../../images/61e2239384a0476eab1615f35b4d7c5ctplv-k3u1fbpfcp-zoom-in-crop-mark4536000.webp" alt="img"></p>
+<p>那到底是为什么?</p>
+<p>我来简单的分析一下</p>
+<p>还是老样子从上之下执行代码,遇到一个readfile,这个是不是异步代码不立即执行,readfile属于poll队列</p>
+<p>好了代码就执行完毕了,代码执行完毕就立即执行满足条件的微任务,当前没有微任务,就按照队列的优先级来执行,当前只有一个poll队列,这个readfile满足条件就可以执行,执行readfile,首先遇到一个setTimeout,这个是不是属于异步代码不立即执行,setTimeout属于timers队列,就放入timers队列,之后遇到一个setImmediate,这个是不是属于异步代码,属于check队列,就放入check队列里,这样poll队列是不是就执行完毕了,执行完一个宏任务,是不是就会去看微任务中有没有满足条件的可以进行执行,当前是不是没有微任务,之后就会切换到check队列,为什么**?因为前面说过Node事件环有顺序,poll队列的后面就是check队列,是不是应该执行完check队列才会回头执行timers队列,所以永远输出setImmediate在前面,setTimeout在后面**</p>
+<p>有一定执行顺序</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="http://example.com">来一份棉花糖</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://example.com/2023/08/06/nodejs/%E4%BA%8B%E4%BB%B6%E7%8E%AF/">http://example.com/2023/08/06/nodejs/%E4%BA%8B%E4%BB%B6%E7%8E%AF/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/../../images/back.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/08/07/nodejs/%E5%8F%AF%E8%AF%BB%E6%B5%81/" title="node中的可读流"><img class="cover" src="/../../images/back.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">node中的可读流</div></div></a></div><div class="next-post pull-right"><a href="/2023/08/05/es6/Object%20created/" title="详解Object.create(null)"><img class="cover" src="/img/%E7%BB%88%E6%9E%81.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">详解Object.create(null)</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/%E7%A7%91%E6%AF%94.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">来一份棉花糖</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">163</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AD%A6Node-%E4%BD%A0%E4%B8%8D%E5%8F%AF%E8%83%BD%E4%B8%8D%E7%9F%A5%E9%81%93Node%E7%9A%84%E4%BA%8B%E4%BB%B6%E7%8E%AF%E5%90%A7"><span class="toc-number">1.</span> <span class="toc-text">学Node,你不可能不知道Node的事件环吧</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E6%A6%82%E8%BF%B0"><span class="toc-number">1.1.</span> <span class="toc-text">1.概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-NodeJS%E4%BA%8B%E4%BB%B6%E7%8E%AF%E5%92%8C%E6%B5%8F%E8%A7%88%E5%99%A8%E4%BA%8B%E4%BB%B6%E7%8E%AF%E5%8C%BA%E5%88%AB"><span class="toc-number">1.2.</span> <span class="toc-text">2.NodeJS事件环和浏览器事件环区别</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1%E4%BB%BB%E5%8A%A1%E9%98%9F%E5%88%97%E4%B8%AA%E6%95%B0%E4%B8%8D%E5%90%8C"><span class="toc-number">1.2.1.</span> <span class="toc-text">2.1任务队列个数不同</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2%E5%BE%AE%E4%BB%BB%E5%8A%A1%E9%98%9F%E5%88%97%E4%B8%8D%E5%90%8C"><span class="toc-number">1.2.2.</span> <span class="toc-text">2.2微任务队列不同</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3%E5%BE%AE%E4%BB%BB%E5%8A%A1%E6%89%A7%E8%A1%8C%E6%97%B6%E6%9C%BA%E4%B8%8D%E5%90%8C-%E5%BA%9F%E9%99%A4"><span class="toc-number">1.2.3.</span> <span class="toc-text">2.3微任务执行时机不同(废除)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4%E5%BE%AE%E4%BB%BB%E5%8A%A1%E4%BC%98%E5%85%88%E7%BA%A7%E4%B8%8D%E5%90%8C"><span class="toc-number">1.2.4.</span> <span class="toc-text">2.4微任务优先级不同</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%AE%8C%E6%95%B4%E6%B5%81%E7%A8%8B"><span class="toc-number">1.3.</span> <span class="toc-text">3.完整流程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E9%9D%A2%E8%AF%95%E9%A2%98"><span class="toc-number">1.4.</span> <span class="toc-text">4.面试题</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/10/18/react/useReducer/" title="No title"><img src="/img/1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="No title"/></a><div class="content"><a class="title" href="/2024/10/18/react/useReducer/" title="No title">No title</a><time datetime="2024-10-18T08:27:18.199Z" title="Created 2024-10-18 16:27:18">2024-10-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/10/11/react/react%E7%9A%84%E5%89%AF%E4%BD%9C%E7%94%A8/" title="No title"><img src="/img/1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="No title"/></a><div class="content"><a class="title" href="/2024/10/11/react/react%E7%9A%84%E5%89%AF%E4%BD%9C%E7%94%A8/" title="No title">No title</a><time datetime="2024-10-11T09:56:31.020Z" title="Created 2024-10-11 17:56:31">2024-10-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/09/25/css/%E4%B8%80%E8%A1%8C%E4%BB%A3%E7%A0%81%E5%93%8D%E5%BA%94%E5%BC%8F/" title="一行代码响应式"><img src="/img/1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="一行代码响应式"/></a><div class="content"><a class="title" href="/2024/09/25/css/%E4%B8%80%E8%A1%8C%E4%BB%A3%E7%A0%81%E5%93%8D%E5%BA%94%E5%BC%8F/" title="一行代码响应式">一行代码响应式</a><time datetime="2024-09-25T02:58:32.507Z" title="Created 2024-09-25 10:58:32">2024-09-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/09/25/Untitled/" title="No title"><img src="/img/1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="No title"/></a><div class="content"><a class="title" href="/2024/09/25/Untitled/" title="No title">No title</a><time datetime="2024-09-25T02:58:25.176Z" title="Created 2024-09-25 10:58:25">2024-09-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/07/14/07-12/" title="No title"><img src="/img/1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="No title"/></a><div class="content"><a class="title" href="/2024/07/14/07-12/" title="No title">No title</a><time datetime="2024-07-14T14:07:25.103Z" title="Created 2024-07-14 22:07:25">2024-07-14</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By 来一份棉花糖</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-heart.min.js" async="async" mobile="false"></script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-show-text.min.js" data-mobile="false" data-text="I,LOVE,YOU" data-fontsize="15px" data-random="true" async="async"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

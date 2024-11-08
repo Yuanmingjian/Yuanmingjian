@@ -1,0 +1,375 @@
+<!DOCTYPE html><html data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>缺乏知识点 | 前端学习笔记</title><meta name="author" content="来一份棉花糖"><meta name="copyright" content="来一份棉花糖"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="二次封装 子组件用 v-bind&#x3D;$attrs来接收父组件的值  属性深度传递  使用attrs html5语义化标签https:&#x2F;&#x2F;link.juejin.cn&#x2F;?target&#x3D;http%3A%2F%2Fwww.html5jscss.com%2Fhtml5-semantics-section.html) HTML 5的革新之一：语义化标签一节元素标签。 在HTML 5出来之前，我们用d">
+<meta property="og:type" content="article">
+<meta property="og:title" content="缺乏知识点">
+<meta property="og:url" content="http://example.com/2024/01/21/%E5%AF%92%E5%81%87%E7%AA%81%E5%87%BB/%E7%BC%BA%E4%B9%8F%E7%9F%A5%E8%AF%86%E7%82%B9/index.html">
+<meta property="og:site_name" content="前端学习笔记">
+<meta property="og:description" content="二次封装 子组件用 v-bind&#x3D;$attrs来接收父组件的值  属性深度传递  使用attrs html5语义化标签https:&#x2F;&#x2F;link.juejin.cn&#x2F;?target&#x3D;http%3A%2F%2Fwww.html5jscss.com%2Fhtml5-semantics-section.html) HTML 5的革新之一：语义化标签一节元素标签。 在HTML 5出来之前，我们用d">
+<meta property="og:locale">
+<meta property="og:image" content="http://example.com/img/1.jpg">
+<meta property="article:published_time" content="2024-01-21T08:16:59.333Z">
+<meta property="article:modified_time" content="2024-04-13T14:10:55.506Z">
+<meta property="article:author" content="来一份棉花糖">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/1.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2024/01/21/%E5%AF%92%E5%81%87%E7%AA%81%E5%87%BB/%E7%BC%BA%E4%B9%8F%E7%9F%A5%E8%AF%86%E7%82%B9/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '缺乏知识点',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-04-13 22:10:55'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="前端学习笔记" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/%E7%A7%91%E6%AF%94.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">163</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">1</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/1.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="前端学习笔记"><span class="site-name">前端学习笔记</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">缺乏知识点</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2024-01-21T08:16:59.333Z" title="Created 2024-01-21 16:16:59">2024-01-21</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2024-04-13T14:10:55.506Z" title="Updated 2024-04-13 22:10:55">2024-04-13</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="缺乏知识点"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="二次封装"><a href="#二次封装" class="headerlink" title="二次封装"></a>二次封装</h2><p><img src="/../../images/image-20240121161721911.png" alt="image-20240121161721911"></p>
+<p>子组件用 v-bind&#x3D;$attrs来接收父组件的值</p>
+<p><img src="/../../images/image-20240121161752218.png" alt="image-20240121161752218"></p>
+<p>属性深度传递  使用attrs</p>
+<h1 id="html5语义化标签"><a href="#html5语义化标签" class="headerlink" title="html5语义化标签"></a>html5语义化标签</h1><p><a href="https://link.juejin.cn/?target=http://www.html5jscss.com/html5-semantics-section.html">https://link.juejin.cn/?target=http%3A%2F%2Fwww.html5jscss.com%2Fhtml5-semantics-section.html</a>)</p>
+<p>HTML 5的革新之一：语义化标签一节元素标签。</p>
+<p>在HTML 5出来之前，我们用<code>div</code>来表示页面章节，但是这些<code>div</code>都没有实际意义。（即使我们用css样式的id和class形容这块内容的意义）。这些标签只是我们提供给浏览器的指令，只是定义一个网页的某些部分。但现在，那些之前没“意义”的标签因为因为html5的出现消失了，这就是我们平时说的“语义”。</p>
+<p>看下图没有用div标签来布局</p>
+<p><img src="/../../images/160c3bf5485ff9cetplv-t2oaga2asx-jj-mark3024000q75.webp" alt="HTML 5的革新——语义化标签(一)"></p>
+<p>html5的布局</p>
+<p>嗯，如上图那个页面结构没有一个div，都是采用html5语义标签（用哪些标签，关键取决于你的设计目标）。</p>
+<h4 id="媒介查询匹配浏览器系统系统颜色-独一抖音"><a href="#媒介查询匹配浏览器系统系统颜色-独一抖音" class="headerlink" title="媒介查询匹配浏览器系统系统颜色    独一抖音"></a>媒介查询匹配浏览器系统系统颜色    独一抖音</h4><h4 id="ajax避免浏览器缓存-提高效应速度"><a href="#ajax避免浏览器缓存-提高效应速度" class="headerlink" title="ajax避免浏览器缓存 提高效应速度"></a>ajax避免浏览器缓存 提高效应速度</h4><p><img src="/../../images/image-20240223212109838.png" alt="image-20240223212109838"></p>
+<h4 id="动态执行脚本"><a href="#动态执行脚本" class="headerlink" title="动态执行脚本"></a>动态执行脚本</h4><p><img src="/../../images/image-20240224134200427.png" alt="image-20240224134200427"></p>
+<h1 id="快手前端面经"><a href="#快手前端面经" class="headerlink" title="快手前端面经"></a>快手前端面经</h1><h4 id="1map和forEach的区别"><a href="#1map和forEach的区别" class="headerlink" title="1map和forEach的区别"></a>1map和forEach的区别</h4><h5 id="foreach改变值"><a href="#foreach改变值" class="headerlink" title="foreach改变值"></a>foreach改变值</h5><p><img src="/../../images/image-20240226095401591.png" alt="image-20240226095401591"></p>
+<p><img src="/../../images/image-20240226094546002.png" alt="image-20240226094546002"></p>
+<h4 id="2promise-all-和-promise-race的区别"><a href="#2promise-all-和-promise-race的区别" class="headerlink" title="2promise all 和 promise race的区别"></a>2promise all 和 promise race的区别</h4><ul>
+<li><p>Promise.all接收的是数组，得到的结果也是数组，并且一一对应，也可以理解为Promise.all照顾跑的最慢的，最慢的跑完才结束。</p>
+</li>
+<li><p>Promise.race接收的也是数组，不过，得到的却是数组中跑的最快的那个，当最快的一跑完就立马结束。</p>
+<p> 扩展</p>
+</li>
+</ul>
+<p><img src="/../../images/image-20240226101804592.png" alt="image-20240226101804592"></p>
+<h4 id="http状态码"><a href="#http状态码" class="headerlink" title="http状态码"></a>http状态码</h4><p><img src="/../../images/image-20240226105104022.png" alt="image-20240226105104022"></p>
+<p>304重定向</p>
+<h4 id="udp和tcp"><a href="#udp和tcp" class="headerlink" title="udp和tcp"></a>udp和tcp</h4><p><img src="/../../images/image-20240226105513979.png" alt="image-20240226105513979"></p>
+<h4 id="面试官问到关于前端关键性能数据监控的问题时，你可以按照以下结构来回答："><a href="#面试官问到关于前端关键性能数据监控的问题时，你可以按照以下结构来回答：" class="headerlink" title="面试官问到关于前端关键性能数据监控的问题时，你可以按照以下结构来回答："></a>面试官问到关于前端关键性能数据监控的问题时，你可以按照以下结构来回答：</h4><ol>
+<li><p>理解问题的重要性</p>
+<ul>
+<li>首先强调前端性能对用户体验的重要性，包括页面加载速度、响应时间、交互流畅性等。</li>
+<li>提到性能问题可能导致用户流失、搜索引擎排名下降等负面影响。</li>
+</ul>
+</li>
+<li><p>关键性能指标 (KPIs)</p>
+<ul>
+<li>列举一些常见的前端性能监控指标，如：<ul>
+<li>页面加载时间 (Time to First Byte, Time to Interactive, DOMContentLoaded, Load Time)</li>
+<li>页面响应时间 (Response Time)</li>
+<li>JavaScript 执行时间</li>
+<li>资源加载时间 (如 CSS、图片、脚本文件等)</li>
+<li>用户交互时间 (如点击、滚动、键盘输入等)</li>
+<li>错误率 (如 404 错误、JavaScript 错误等)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>监控工具和技术</p>
+<ul>
+<li>介绍一些常用的前端性能监控工具，如：<ul>
+<li>Lighthouse</li>
+<li>PageSpeed Insights</li>
+<li>WebPageTest</li>
+<li>Performance tab in Chrome DevTools</li>
+<li>New Relic</li>
+<li>Datadog</li>
+<li>Pingdom</li>
+</ul>
+</li>
+<li>提及这些工具如何帮助你收集和分析性能数据，以及它们提供的具体功能（如瀑布图、性能指标、用户行为分析等）。</li>
+</ul>
+</li>
+<li><p><strong>数据分析和优化</strong></p>
+<p>：</p>
+<ul>
+<li>讲解如何通过分析监控数据来找出性能瓶颈，并给出优化建议。</li>
+<li>举例说明如何通过调整代码、优化资源加载、使用缓存策略、改进网络请求等方式来提升前端性能。</li>
+</ul>
+</li>
+<li><p>持续监控和反馈循环</p>
+<p>：</p>
+<ul>
+<li>强调性能监控是一个持续的过程，需要定期检查和更新。</li>
+<li>提到建立反馈循环的重要性，确保团队能够迅速响应性能问题，并在产品迭代中持续改进。</li>
+</ul>
+</li>
+<li><p>个人经验和项目实例</p>
+<p>：</p>
+<ul>
+<li>如果可能，分享一些你在实际项目中进行前端性能监控的经验和案例，展示你如何解决问题并取得积极成果。</li>
+</ul>
+</li>
+<li><p>未来展望</p>
+<p>：</p>
+<ul>
+<li>提及一些前沿的性能监控趋势和技术，如使用 AI 进行性能预测和优化、服务端渲染 (SSR)、代码拆分 (Code Splitting) 等。</li>
+<li>表达你对持续学习和掌握新技术的热情。</li>
+</ul>
+</li>
+</ol>
+<p><strong>第四点分析监控数据以找出性能瓶颈及优化建议</strong></p>
+<ol>
+<li><p>识别瓶颈</p>
+<ul>
+<li><strong>加载时间分析</strong>：通过工具提供的加载时间报告，识别哪些资源（如脚本、样式表、图片）加载时间过长，这些通常是性能瓶颈的初步指示。</li>
+<li><strong>CPU与内存使用</strong>：分析CPU和内存的使用情况，识别是否有资源密集型操作或内存泄漏问题。</li>
+<li><strong>网络延迟</strong>：查看网络请求的延迟，确定是否存在服务器响应慢或网络带宽瓶颈。</li>
+</ul>
+</li>
+<li><p>用户行为分析</p>
+<ul>
+<li><strong>页面交互</strong>：分析用户在页面上的交互行为，如滚动、点击等，找出可能导致延迟或卡顿的操作。</li>
+<li><strong>错误报告</strong>：检查用户端的错误报告，识别常见的JavaScript错误或资源加载失败问题。</li>
+</ul>
+</li>
+<li><p>优化建议</p>
+<ul>
+<li><strong>减少资源加载</strong>：压缩和合并资源文件，如使用Gzip压缩、CSS和JavaScript合并等。</li>
+<li><strong>优化图片</strong>：使用适当的图片格式和压缩工具，减少图片文件大小。</li>
+<li><strong>异步加载</strong>：使用异步加载技术，如异步脚本、懒加载图片等，避免阻塞主线程。</li>
+<li><strong>代码优化</strong>：减少DOM操作、避免不必要的重绘和回流，使用Web Workers处理复杂计算。</li>
+</ul>
+</li>
+</ol>
+<p><strong>举例说明性能提升方法</strong></p>
+<ol>
+<li><p>调整代码</p>
+<ul>
+<li><strong>避免内联脚本</strong>：将内联脚本（如<code>&lt;script&gt;</code>标签直接写在HTML中）移动到外部文件，并异步加载，以减少页面渲染时的阻塞。</li>
+<li><strong>使用事件委托</strong>：通过事件委托减少事件监听器的数量，提高性能。</li>
+</ul>
+</li>
+<li><p>优化资源加载</p>
+<ul>
+<li><strong>利用CDN</strong>：通过内容分发网络（CDN）加快资源文件的分发速度，减少用户等待时间。</li>
+<li><strong>预加载和预取</strong>：使用<code>&lt;link rel=&quot;preload&quot;&gt;</code>和<code>&lt;link rel=&quot;prefetch&quot;&gt;</code>来预加载和预取关键资源，减少页面加载时的延迟。</li>
+</ul>
+</li>
+<li><p>使用缓存策略</p>
+<ul>
+<li><strong>HTTP缓存</strong>：通过设置HTTP缓存头（如<code>Cache-Control</code>和<code>Expires</code>），让浏览器缓存静态资源，减少重复请求。</li>
+<li><strong>Service Workers</strong>：使用Service Workers来拦截和缓存网络请求，提高资源加载速度。</li>
+</ul>
+</li>
+<li><p>改进网络请求</p>
+<ul>
+<li><strong>减少请求数量</strong>：合并多个小的CSS或JavaScript文件为一个文件，减少网络请求次数。</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li><strong>使用更高效的API</strong>：如使用Fetch API替代XMLHttpRequest进行网络请求，因为它提供了更好的错误处理和更简洁的语法。</li>
+</ul>
+<p>通过以上方法，可以显著提升前端性能，提供更好的用户体验。重要的是，每个项目和应用都有其独特性，因此性能优化需要针对具体情况进行定制和优化。</p>
+<h3 id="闭包的属性放在堆内存还是栈内存为什么"><a href="#闭包的属性放在堆内存还是栈内存为什么" class="headerlink" title="闭包的属性放在堆内存还是栈内存为什么"></a>闭包的属性放在堆内存还是栈内存为什么</h3><p>闭包中的变量主要存储在<strong>堆内存</strong>中。这是因为闭包涉及到的函数会保留对其外部作用域的引用，而这些引用的值（变量）通常会存储在堆内存中。堆内存用于存储引用数据类型值，而闭包中的变量正是这样的引用类型。</p>
+<p>在JavaScript中，栈内存主要用于存储基本数据类型值以及提供代码执行的环境。当函数执行完成后，所形成的私有作用域（栈内存）通常会自动释放掉，其中的值也会被释放。但是，如果函数内部存在闭包，那么闭包引用的外部变量将不会被释放，因为这些变量仍然被闭包所引用，所以它们会留在堆内存中，直到闭包不再被引用为止。</p>
+<p>闭包的存在是为了保护函数的私有变量不受外部的干扰，同时实现方法和属性的私有化。然而，过度使用闭包可能会导致内存泄露，因为闭包会携带包含其它的函数作用域，因此会比其他函数占用更多的内存。</p>
+<h4 id="fetch"><a href="#fetch" class="headerlink" title="fetch"></a>fetch</h4><p>1、fetch 是 XMLHttpRequest 的一种替代方案，fetch是js原生语法也能像ajax一样获取后台数据 </p>
+<p>优点： - 基于标准Promise实现，支持async&#x2F; await - 语法简洁，更加语意化fetch 可以理解成简化版的 XMLHttpRequest </p>
+<p>缺点： - 兼容性不好，不支持IE - 不能中断请求（xhr有个xhr.abort 方法能直接中断请求） - 没法检测请求进度  </p>
+<h4 id="服务端渲染"><a href="#服务端渲染" class="headerlink" title="服务端渲染"></a>服务端渲染</h4><p>\1. - 传统服务端渲染 : JSP&#x2F;PHP等等(前后端不分离的旧时代，模板引擎😅，后端拿到前端页面替换数据，前后端耦合)     - 现代服务端渲染 : (Vue-&gt;Nuxt.js,React-&gt;Next.js，自己做SSR ， 前后端分离的同时实现SSR)  2. 服务端渲染(SSR)即是在服务器端渲染完整的HTML后返回给客户端(通常是浏览器)。  3. 客户端渲染(CSR),也就是常见的单页面应用(SPA),由服务器端返回的初始 HTML 页面，由 JS 去异步加载数据，完成页面的渲染。由于ajax请求是异步的，百度Google等搜索引擎抓取的页面是几乎空白的，可以右键查看网页源代码看是否完整的HTML结构判断是SSR还是CSR。  4. 同构渲染，就是将SSR和CSR结合在一起，服务端渲染首屏后，激活应用，按照SPA方式运行，结合CSR和SSR各自优点。  5. 从上可知，服务端渲染的优点是:  - 搜索引擎爬虫能爬取完整HTML，有利于做搜索引擎优化(SEO),提高网站流量和曝光率  - 首屏渲染在服务端就完成，所以有更快的首屏加载速度  - 只是首屏快，其他页面不像SPA一样是无感刷新，切换页面通过超链接进行页面跳转，体验稍差(传统PHP&#x2F;JSP) 6.服务端渲染的缺点:  - 由于是在服务端进行渲染，需要占用更多服务器端资源(更多的CPU和内存)。  - 由于在服务端渲染，所以有些浏览器API无法使用，同样地 客户端一些生命周期在SSR也是不存在的。  - 部署和开发要求稍高，前后端耦合</p>
+<h4 id="性能指标"><a href="#性能指标" class="headerlink" title="性能指标"></a>性能指标</h4><p>1.性能评估 Chrome Performance选项卡 &#x2F; Lighthouse 生成性能检测报告<br> 2.值得关注的性能指标<br>  （1）LCP (Largest Contentful Paint 最大内容绘制 )<br> （2）首屏渲染时间（也叫白屏时间）<br> （3）FCP (Fitst Contentful Paint 首先内容绘制 )<br> （4）可交互时间 (Time to Interactive TTI)<br> （5） Network请求时间(jax,js等)<br> 3.浏览器开发者工具什么都能看得到，可以调用性能监测API 或建立 前端监控系统(无痕埋点)   </p>
+<p>####性能优化方向</p>
+<p> 前端性能优化分为两类，一类是文件加载更快，另一类是文件渲染更快。 加载更快的方法： 让传输的数据包更小（压缩文件&#x2F;图片）：图片压缩和文件压缩 减少网络请求的次数：雪碧图&#x2F;精灵图、节流防抖 减少渲染的次数：缓存（HTTP缓存、本地缓存、Vue的keep-alive缓存等）  渲染更快的方法： 提前渲染：ssr服务器端渲染 避免渲染阻塞：CSS放在HTML的head中  JS放在HTML的body底部 避免无用渲染：懒加载 减少渲染次数：对dom查询进行缓存、将dom操作合并、使用减少重排的标签  加分回答 雪碧图的应用场景一般是项目中不常更换的一些固定图标组合在一起，比如logo、搜索图标、切换图标等。 电商项目中最常用到的懒加载，一般在查看商品展示的时候通常下拉加载更多，因为商品数据太多，一次性请求过来数据太大且渲染的时间太长。</p>
+<h4 id="vue-router原理"><a href="#vue-router原理" class="headerlink" title="vue-router原理"></a>vue-router原理</h4><p>HashRouter的原理：通过<code>window.onhashchange</code>方法获取新URL中hash值，再做进一步处理  HistoryRouter的原理：通过<code>history.pushState </code>使用它做页面跳转不会触发页面刷新，使用<code>window.onpopstate</code> 监听浏览器的前进和后退，再做其他处理  加分回答 hash模式下url会带有#，需要url更优雅时，可以使用history模式。 需要兼容低版本的浏览器时，建议使用hash模式。 需要添加任意类型数据到记录时，可以使用history模式。</p>
+<h4 id="vite为什么比webpack快"><a href="#vite为什么比webpack快" class="headerlink" title="vite为什么比webpack快"></a>vite为什么比webpack快</h4><p>是<code>Vite</code>的打包方式，刚刚说了，<code>Vite</code>是直接把转换后的<code>es module</code>的JavaScript代码，扔给<code>支持es module的浏览器</code>，让浏览器自己去加载依赖，也就是把压力丢给了<code>浏览器</code>，从而达到了项目启动速度快的效果。</p>
+<p><img src="/../../images/3f56ff49a8704589ace3f3711fea5b10tplv-k3u1fbpfcp-zoom-in-crop-mark1512000.webp" alt="image.png"></p>
+<h3 id="解决更新缓慢"><a href="#解决更新缓慢" class="headerlink" title="解决更新缓慢"></a>解决更新缓慢</h3><p>刚刚说了，项目启动时，将模块分成<code>依赖</code>和<code>源码</code>，当你更新代码时，<code>依赖</code>就不需要重新加载，只需要精准地找到是哪个<code>源码</code>的文件更新了，更新相对应的文件就行了。这样做使得更新速度非常快。</p>
+<p><code>Vite</code> 同时利用 <code>HTTP</code> 头来加速整个页面的重新加载（再次让浏览器为我们做更多事情）：源码模块的请求会根据 <code>304 Not Modified</code> 进行协商缓存，而依赖模块请求则会通过 <code>Cache-Control: max-age=31536000,immutable</code> 进行强缓存，因此一旦被缓存它们将不需要再次请求。</p>
+<p><code>vite</code>**开发环境依赖<code>esbuild</code>**进行预构建，生产环境则依赖<code>**rollup**</code>进行打包，并且充分利用了现代浏览器的特性，比如<code>http2</code>、<code>ES module</code>，<code>vite</code>是站在众多巨人肩膀上的一个产物， 类似<code>webpack + webpack-dev-server</code>的结合体，是一个非常棒的前端项目的构建工具。</p>
+<p><strong>我们再来看一下，vite与webpack在项目构建上有哪些区别。</strong></p>
+<p><strong>webpack</strong></p>
+<p>webpack是基于<code>nodejs</code>运行的，但<code>js</code>只能单线程运行，无法利用多核CPU的优势，当项目越来越大时，构建速度也就越来越慢了。</p>
+<p><strong>vite</strong></p>
+<p>vite<code>预构建</code>与<code>按需编译</code>的过程，都是使用<code>esbuild</code>完成的。</p>
+<p><code>esbuild</code>是用<code>go</code>语言编写的，可以充分利用多核CPU的优势，所以vite开发环境下的<code>预构建</code>与<code>按需编译</code>速度，都是非常快的。</p>
+<p>vite充分利用了http2可以并发请求的优势，这也是速度快的一个主要原因。 接下来，我们了解一下<strong>http2</strong>的来龙去脉。</p>
+<h5 id="打包机制"><a href="#打包机制" class="headerlink" title="打包机制"></a>打包机制</h5><p><code>bundle</code> 工作机制的核心部分分为两块：构建模块依赖图 - <code>module graph</code> 和将 <code>module graph</code> 分解为最终供浏览器使用的几个输出文件。</p>
+<p>v<code>ite</code> 之所以在 <code>dev server</code> 启动方面，如此给力，是因为它采取了与 <code>Webpack</code> 截然不同的 <code>unbundle</code> 机制。</p>
+<p><code>unbundle</code> 机制，顾名思义，不需要做 <code>bundle</code> 操作，即不需要构建、分解 <code>module graph</code>，源文件之间的依赖关系完全通过浏览器对 <code>ESM</code> 规范的支持来解析。这就使得 <code>dev server</code> 在启动过程中只需做一些初始化的工作，剩下的完全由浏览器支持。这和 <code>Webpack</code> 的 <code>bundle</code> 机制一比，简直就是降维打击，都有点欺负人了 😂。</p>
+<p>那有的同学就会问，源文件的 <code>resolve</code>、<code>load</code>、<code>transform</code>、<code>parse</code> 什么时候做呢 ？</p>
+<p>答案是浏览器发起请求以后，<code>dev server</code> 端会通过 <code>middlewares</code> 对请求做拦截，然后对源文件做 <code>resolve</code>、<code>load</code>、<code>transform</code>、<code>parse</code> 操作，然后再将转换以后的内容发送给浏览器。</p>
+<h4 id="vue-keep-alive"><a href="#vue-keep-alive" class="headerlink" title="vue keep-alive"></a>vue keep-alive</h4><p> <code>&lt;keep-alive&gt;</code>作用：缓存组件，提升性能，避免重复加载一些不需要经常变动且内容较多的组件。 <code>&lt;keep-alive&gt;</code>的使用方法：使用<code>&lt;keep-alive&gt;</code>标签对需要缓存的组件进行包裹，默认情况下被<code>&lt;keep-alive&gt;</code>标签包裹的组件都会进行缓存，区分被包裹的组件是否缓存有两种方法，第一种是给keepalive 添加属性，组件名称指的是具体组件添加的name，不是路由里面的name。include 包含的组件(可以为字符串，数组，以及正则表达式,只有匹配的组件会被缓存)。exclude 排除的组件(以为字符串，数组，以及正则表达式,任何匹配的组件都不会被缓存)。第二种也是最常用的一种是，和路由配合使用：在路由中添加meta属性。  使用keepalive导致组件不重新加载，也就不会重新执行生命周期的函数，如果要解决这个问题，就需要两个属性进入时触发：activated 退出时触发：deactivated  加分回答 <code>&lt;keep-alive&gt;</code>适用的场景：首页展示固定数据的组件，比如banner九宫格</keep-alive></keep-alive></keep-alive></keep-alive></keep-alive></p>
+<h4 id="vue为什么多次操作只更新一次"><a href="#vue为什么多次操作只更新一次" class="headerlink" title="vue为什么多次操作只更新一次"></a>vue为什么多次操作只更新一次</h4><p>异步更新策略  当前微任务队列结束之后 在重新开始渲染</p>
+<p>Vue.js 在处理 DOM 更新时，为了提高性能，采用了异步更新的策略，即当数据发生变化时，Vue 不会立即更新 DOM，而是等到当前微任务（microtask）队列清空后再执行更新操作。这就是为什么在多次操作数据后，Vue 只更新一次 DOM 的原因</p>
+<p>这种异步更新的机制有以下几个优点：</p>
+<ol>
+<li><strong>性能优化</strong>：如果每次数据变化都立即更新 DOM，那么会导致大量的不必要的计算和渲染，尤其是在快速连续的操作数据时。Vue 的异步更新策略使得多个数据变化只触发一次 DOM 更新，从而减少了浏览器的重排和重绘次数，提高了性能。</li>
+<li><strong>批处理</strong>：Vue 可以将多次数据变化合并成一次 DOM 更新，这样可以在一次更新中处理所有的变化，而不是分别处理每个变化。这有助于减少浏览器的渲染负担。</li>
+<li><strong>用户体验</strong>：在某些场景下，用户可能察觉不到数据的微小变化，而 Vue 的异步更新策略可以帮助隐藏这种变化，从而提高用户体验。</li>
+</ol>
+<h3 id="v8引擎"><a href="#v8引擎" class="headerlink" title="v8引擎"></a>v8引擎</h3><p>1 V8 引擎的核心功能是解析、优化和执行 JavaScript 代码。其工作过程可以分为以下几个主要阶段：</p>
+<h4 id="词法分析"><a href="#词法分析" class="headerlink" title="词法分析"></a>词法分析</h4><p><code>扫描器（Scanner）</code>用于对拿到的JavaScript代码进行<code>词法分析</code>，这个过程会将源代码转换为<code>tokens</code>，也叫<code>词素</code>，在 <a href="https://link.juejin.cn/?target=https://github.com/v8/v8/blob/master/src/parsing/keywords.txt">keywords.txt</a> 文件中可以找到所有的JS <code>tokens</code>。该文件定义了一个结构体</p>
+<h4 id="语法分析"><a href="#语法分析" class="headerlink" title="语法分析"></a>语法分析</h4><p><code>解析器（Parser）</code>会对这些<code>tokens</code>进行<code>语法分析</code>，并根据它来构建<code>抽象语法树(Abstract Syntax Tree，简写为AST)</code>，同时会验证语法，如果有语法错误就会抛出来。</p>
+<h4 id="三，代码执行与优化"><a href="#三，代码执行与优化" class="headerlink" title="三，代码执行与优化"></a>三，代码执行与优化</h4><ul>
+<li><strong>执行</strong>：<code>Ignition</code>解释执行生成的字节码，这是JavaScript代码首次运行的形式。在执行的同时，V8会收集类型信息，为后续的优化编译提供数据。</li>
+<li><strong>优化</strong>：基于收集到的类型信息，然后V8的<code>JIT</code>编译器<code>TurboFan</code>会将“热点代码”（经常执行的代码）编译成优化的机器代码，以提高执行效率。</li>
+<li><strong>去优化</strong>：在执行过程中，如果V8发现对象的结构被动态修改了，那么优化之后的代码势必会变成无效的代码，这时候就需要执行<code>去优化</code>操作，经过去优化的代码，下次执行时就会回退到解释器解释执行</li>
+</ul>
+<h4 id="二，字节码生成"><a href="#二，字节码生成" class="headerlink" title="二，字节码生成"></a>二，字节码生成</h4><p>V8的<code>解释器（Interpreter）</code>名为<code>Ignition</code>，它会将<code>AST</code>转换成<code>ByteCode（字节码）</code>，这是一种介于<code>AST</code>和机器码之间的中间表示形式，专为快速解释执行设计，由于需要通过解释器执行或编译成机器码，其执行速度通常比直接执行机器码更慢。</p>
+<p><img src="/../../images/image-20240312174837376.png" alt="image-20240312174837376"></p>
+<p><img src="/../../images/image-20240312174853048.png" alt="image-20240312174853048"></p>
+<h4 id="new一个class类和new一个function构造函数的区别"><a href="#new一个class类和new一个function构造函数的区别" class="headerlink" title="new一个class类和new一个function构造函数的区别"></a>new一个class类和new一个function构造函数的区别</h4><p>3.84 icA:&#x2F; 09&#x2F;12 <a href="mailto:&#109;&#64;&#x64;&#46;&#x41;&#84;">&#109;&#64;&#x64;&#46;&#x41;&#84;</a> class转function # JavaScript # 前端开发工程师 # 编程 # 程序员 # web前端  <a target="_blank" rel="noopener" href="https://v.douyin.com/iYBg1V7t/">https://v.douyin.com/iYBg1V7t/</a> 复制此链接，打开Dou音搜索，直接观看视频！</p>
+<ol>
+<li><strong>语法简洁性</strong>：使用类（class）的语法更简洁，更易于阅读和理解，尤其是在处理继承和方法重用时。</li>
+<li><strong>继承</strong>：类（class）提供了内置的继承机制，可以通过<code>extends</code>关键字轻松实现。而使用函数作为构造函数时，需要手动实现原型链继承，这通常更加复杂。</li>
+<li><strong>方法定义</strong>：在类中，方法可以直接定义在类体内部。而在使用函数作为构造函数时，方法通常定义在构造函数内部，这可能会导致每个实例都有自己的方法副本，从而增加内存消耗（除非方法定义在原型上）。</li>
+<li><strong>静态属性&#x2F;方法</strong>：类支持静态属性和方法，这是使用函数作为构造函数无法直接提供的。</li>
+<li><strong>私有和受保护成员</strong>：虽然JavaScript本身并不直接支持私有或受保护的成员，但类语法结合某些模式（如Symbol或WeakMap）可以更容易地实现这些特性。</li>
+<li><strong>兼容性</strong>：类（class）是ES6引入的新特性，因此在一些老旧的浏览器或环境中可能不受支持。而函数作为构造函数则具有更好的兼容性。</li>
+</ol>
+<h3 id="隐藏一个div的方法"><a href="#隐藏一个div的方法" class="headerlink" title="隐藏一个div的方法"></a>隐藏一个div的方法</h3><p><img src="/../../images/image-20240411224620048.png" alt="image-20240411224620048"></p>
+<p>这段代码将四种隐藏元素的方法分别展示出来，然后绑定其点击事件，经过测试，主要有下面的结论：</p>
+<p>1、display:none：元素彻底消失，很显然不会触发其点击事件<br>2、visibility:hidden：无法触发其点击事件，有一种说法是display:none是元素看不见摸不着，而visibility:hidden是看不见摸得着，这种说法是不准确的，设置元素的visibility后无法触发点击事件，说明这种方法元素也是消失了，只是依然占据着页面空间。<br>3、opacity:0：可以触发点击事件，原因也很简单，设置元素透明度为0后，元素只是相对于人眼不存在而已，对浏览器来说，它还是存在的，所以可以触发点击事件<br>4、height:0：将元素的高度设置为0，并且设置overflow:hidden。使用这种方法来隐藏元素，是否可以触发事件要根据具体的情况来分析。如果元素设置了border，padding等属性不为0，很显然，页面上还是能看到这个元素的，触发元素的点击事件完全没有问题。如果全部属性都设置为0，很显然，这个元素相当于消失了，即无法触发点击事件。</p>
+<p>但是这些结论真的准确吗？<br>我们在上面的代码中添加这样一句代码：</p>
+<p>结果发现，触发了click事件，也就是通过JS可以触发被设置为display:none的元素的事件。<br>所以前面无法触发点击事件的真正原因是鼠标无法真正接触到被设置成隐藏的元素！！！</p>
+<h4 id="获取元素对象"><a href="#获取元素对象" class="headerlink" title="获取元素对象"></a>获取元素对象</h4><p><img src="/../../images/image-20240412155233230.png" alt="image-20240412155233230"></p>
+<h2 id="bfc"><a href="#bfc" class="headerlink" title="bfc"></a>bfc</h2><h5 id="概念"><a href="#概念" class="headerlink" title="概念:"></a>概念:</h5><p>BFC 是一种特殊的上下文环境。当一个元素创建 BFC 后，就具备了一个完全独立的环境。</p>
+<p>BFC 会影响当前元素和内部元素的布局表现，但不会影响跟外部元素之间的布局关系。</p>
+<p>BFC 被用烂了的 2 个场景分别是清除浮动影响（clear the floats） 包含浮动元素 不让他影响外面</p>
+<p> 和避免外边距合并（prevent margins collapsing）。</p>
+<h4 id="隐藏元素"><a href="#隐藏元素" class="headerlink" title="隐藏元素"></a>隐藏元素</h4><p><img src="/../../images/image-20240413221054465.png" alt="image-20240413221054465"></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="http://example.com">来一份棉花糖</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://example.com/2024/01/21/%E5%AF%92%E5%81%87%E7%AA%81%E5%87%BB/%E7%BC%BA%E4%B9%8F%E7%9F%A5%E8%AF%86%E7%82%B9/">http://example.com/2024/01/21/%E5%AF%92%E5%81%87%E7%AA%81%E5%87%BB/%E7%BC%BA%E4%B9%8F%E7%9F%A5%E8%AF%86%E7%82%B9/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/img/1.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2024/01/24/%E6%95%B0%E6%8D%AE%E7%A0%94%E7%A9%B6%E9%99%A2/" title=""><img class="cover" src="/img/1.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info"></div></div></a></div><div class="next-post pull-right"><a href="/2024/01/21/vue/vue3%20setup/" title=""><img class="cover" src="/img/1.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info"></div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/%E7%A7%91%E6%AF%94.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">来一份棉花糖</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">163</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E6%AC%A1%E5%B0%81%E8%A3%85"><span class="toc-number">1.</span> <span class="toc-text">二次封装</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#html5%E8%AF%AD%E4%B9%89%E5%8C%96%E6%A0%87%E7%AD%BE"><span class="toc-number"></span> <span class="toc-text">html5语义化标签</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AA%92%E4%BB%8B%E6%9F%A5%E8%AF%A2%E5%8C%B9%E9%85%8D%E6%B5%8F%E8%A7%88%E5%99%A8%E7%B3%BB%E7%BB%9F%E7%B3%BB%E7%BB%9F%E9%A2%9C%E8%89%B2-%E7%8B%AC%E4%B8%80%E6%8A%96%E9%9F%B3"><span class="toc-number">0.0.1.</span> <span class="toc-text">媒介查询匹配浏览器系统系统颜色    独一抖音</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ajax%E9%81%BF%E5%85%8D%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BC%93%E5%AD%98-%E6%8F%90%E9%AB%98%E6%95%88%E5%BA%94%E9%80%9F%E5%BA%A6"><span class="toc-number">0.0.2.</span> <span class="toc-text">ajax避免浏览器缓存 提高效应速度</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E6%89%A7%E8%A1%8C%E8%84%9A%E6%9C%AC"><span class="toc-number">0.0.3.</span> <span class="toc-text">动态执行脚本</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BF%AB%E6%89%8B%E5%89%8D%E7%AB%AF%E9%9D%A2%E7%BB%8F"><span class="toc-number"></span> <span class="toc-text">快手前端面经</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1map%E5%92%8CforEach%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">0.0.1.</span> <span class="toc-text">1map和forEach的区别</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#foreach%E6%94%B9%E5%8F%98%E5%80%BC"><span class="toc-number">0.0.1.1.</span> <span class="toc-text">foreach改变值</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2promise-all-%E5%92%8C-promise-race%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">0.0.2.</span> <span class="toc-text">2promise all 和 promise race的区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#http%E7%8A%B6%E6%80%81%E7%A0%81"><span class="toc-number">0.0.3.</span> <span class="toc-text">http状态码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#udp%E5%92%8Ctcp"><span class="toc-number">0.0.4.</span> <span class="toc-text">udp和tcp</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%A2%E8%AF%95%E5%AE%98%E9%97%AE%E5%88%B0%E5%85%B3%E4%BA%8E%E5%89%8D%E7%AB%AF%E5%85%B3%E9%94%AE%E6%80%A7%E8%83%BD%E6%95%B0%E6%8D%AE%E7%9B%91%E6%8E%A7%E7%9A%84%E9%97%AE%E9%A2%98%E6%97%B6%EF%BC%8C%E4%BD%A0%E5%8F%AF%E4%BB%A5%E6%8C%89%E7%85%A7%E4%BB%A5%E4%B8%8B%E7%BB%93%E6%9E%84%E6%9D%A5%E5%9B%9E%E7%AD%94%EF%BC%9A"><span class="toc-number">0.0.5.</span> <span class="toc-text">面试官问到关于前端关键性能数据监控的问题时，你可以按照以下结构来回答：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%97%AD%E5%8C%85%E7%9A%84%E5%B1%9E%E6%80%A7%E6%94%BE%E5%9C%A8%E5%A0%86%E5%86%85%E5%AD%98%E8%BF%98%E6%98%AF%E6%A0%88%E5%86%85%E5%AD%98%E4%B8%BA%E4%BB%80%E4%B9%88"><span class="toc-number">0.1.</span> <span class="toc-text">闭包的属性放在堆内存还是栈内存为什么</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#fetch"><span class="toc-number">0.1.1.</span> <span class="toc-text">fetch</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%B8%B2%E6%9F%93"><span class="toc-number">0.1.2.</span> <span class="toc-text">服务端渲染</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87"><span class="toc-number">0.1.3.</span> <span class="toc-text">性能指标</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#vue-router%E5%8E%9F%E7%90%86"><span class="toc-number">0.1.4.</span> <span class="toc-text">vue-router原理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#vite%E4%B8%BA%E4%BB%80%E4%B9%88%E6%AF%94webpack%E5%BF%AB"><span class="toc-number">0.1.5.</span> <span class="toc-text">vite为什么比webpack快</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E6%9B%B4%E6%96%B0%E7%BC%93%E6%85%A2"><span class="toc-number">0.2.</span> <span class="toc-text">解决更新缓慢</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%89%93%E5%8C%85%E6%9C%BA%E5%88%B6"><span class="toc-number">0.2.0.1.</span> <span class="toc-text">打包机制</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#vue-keep-alive"><span class="toc-number">0.2.1.</span> <span class="toc-text">vue keep-alive</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#vue%E4%B8%BA%E4%BB%80%E4%B9%88%E5%A4%9A%E6%AC%A1%E6%93%8D%E4%BD%9C%E5%8F%AA%E6%9B%B4%E6%96%B0%E4%B8%80%E6%AC%A1"><span class="toc-number">0.2.2.</span> <span class="toc-text">vue为什么多次操作只更新一次</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#v8%E5%BC%95%E6%93%8E"><span class="toc-number">0.3.</span> <span class="toc-text">v8引擎</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90"><span class="toc-number">0.3.1.</span> <span class="toc-text">词法分析</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%AD%E6%B3%95%E5%88%86%E6%9E%90"><span class="toc-number">0.3.2.</span> <span class="toc-text">语法分析</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%89%EF%BC%8C%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E4%B8%8E%E4%BC%98%E5%8C%96"><span class="toc-number">0.3.3.</span> <span class="toc-text">三，代码执行与优化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C%EF%BC%8C%E5%AD%97%E8%8A%82%E7%A0%81%E7%94%9F%E6%88%90"><span class="toc-number">0.3.4.</span> <span class="toc-text">二，字节码生成</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#new%E4%B8%80%E4%B8%AAclass%E7%B1%BB%E5%92%8Cnew%E4%B8%80%E4%B8%AAfunction%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">0.3.5.</span> <span class="toc-text">new一个class类和new一个function构造函数的区别</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9A%90%E8%97%8F%E4%B8%80%E4%B8%AAdiv%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-number">0.4.</span> <span class="toc-text">隐藏一个div的方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E5%85%83%E7%B4%A0%E5%AF%B9%E8%B1%A1"><span class="toc-number">0.4.1.</span> <span class="toc-text">获取元素对象</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#bfc"><span class="toc-number">1.</span> <span class="toc-text">bfc</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%A6%82%E5%BF%B5"><span class="toc-number">1.0.0.1.</span> <span class="toc-text">概念:</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9A%90%E8%97%8F%E5%85%83%E7%B4%A0"><span class="toc-number">1.0.1.</span> <span class="toc-text">隐藏元素</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/10/18/react/useReducer/" title="No title"><img src="/img/1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="No title"/></a><div class="content"><a class="title" href="/2024/10/18/react/useReducer/" title="No title">No title</a><time datetime="2024-10-18T08:27:18.199Z" title="Created 2024-10-18 16:27:18">2024-10-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/10/11/react/react%E7%9A%84%E5%89%AF%E4%BD%9C%E7%94%A8/" title="No title"><img src="/img/1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="No title"/></a><div class="content"><a class="title" href="/2024/10/11/react/react%E7%9A%84%E5%89%AF%E4%BD%9C%E7%94%A8/" title="No title">No title</a><time datetime="2024-10-11T09:56:31.020Z" title="Created 2024-10-11 17:56:31">2024-10-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/09/25/css/%E4%B8%80%E8%A1%8C%E4%BB%A3%E7%A0%81%E5%93%8D%E5%BA%94%E5%BC%8F/" title="一行代码响应式"><img src="/img/1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="一行代码响应式"/></a><div class="content"><a class="title" href="/2024/09/25/css/%E4%B8%80%E8%A1%8C%E4%BB%A3%E7%A0%81%E5%93%8D%E5%BA%94%E5%BC%8F/" title="一行代码响应式">一行代码响应式</a><time datetime="2024-09-25T02:58:32.507Z" title="Created 2024-09-25 10:58:32">2024-09-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/09/25/Untitled/" title="No title"><img src="/img/1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="No title"/></a><div class="content"><a class="title" href="/2024/09/25/Untitled/" title="No title">No title</a><time datetime="2024-09-25T02:58:25.176Z" title="Created 2024-09-25 10:58:25">2024-09-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/07/14/07-12/" title="No title"><img src="/img/1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="No title"/></a><div class="content"><a class="title" href="/2024/07/14/07-12/" title="No title">No title</a><time datetime="2024-07-14T14:07:25.103Z" title="Created 2024-07-14 22:07:25">2024-07-14</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By 来一份棉花糖</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-heart.min.js" async="async" mobile="false"></script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-show-text.min.js" data-mobile="false" data-text="I,LOVE,YOU" data-fontsize="15px" data-random="true" async="async"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
