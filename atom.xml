@@ -3,11 +3,11 @@
   <title>前端学习笔记</title>
   
   
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="https://yuanmingjian.github.io/Yuanmingjian/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
+  <link href="https://yuanmingjian.github.io/Yuanmingjian/"/>
   <updated>2024-11-08T09:15:04.997Z</updated>
-  <id>http://example.com/</id>
+  <id>https://yuanmingjian.github.io/Yuanmingjian/</id>
   
   <author>
     <name>来一份棉花糖</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>react的一些钩子</title>
-    <link href="http://example.com/2024/10/18/react/useReducer/"/>
-    <id>http://example.com/2024/10/18/react/useReducer/</id>
+    <link href="https://yuanmingjian.github.io/Yuanmingjian/2024/10/18/react/useReducer/"/>
+    <id>https://yuanmingjian.github.io/Yuanmingjian/2024/10/18/react/useReducer/</id>
     <published>2024-10-18T08:27:18.199Z</published>
     <updated>2024-11-08T09:15:04.997Z</updated>
     
@@ -38,8 +38,8 @@
   
   <entry>
     <title>react的一些小记</title>
-    <link href="http://example.com/2024/10/11/react/react%E7%9A%84%E5%89%AF%E4%BD%9C%E7%94%A8/"/>
-    <id>http://example.com/2024/10/11/react/react%E7%9A%84%E5%89%AF%E4%BD%9C%E7%94%A8/</id>
+    <link href="https://yuanmingjian.github.io/Yuanmingjian/2024/10/11/react/react%E7%9A%84%E5%89%AF%E4%BD%9C%E7%94%A8/"/>
+    <id>https://yuanmingjian.github.io/Yuanmingjian/2024/10/11/react/react%E7%9A%84%E5%89%AF%E4%BD%9C%E7%94%A8/</id>
     <published>2024-10-11T09:56:31.020Z</published>
     <updated>2024-11-08T09:16:15.825Z</updated>
     
@@ -58,8 +58,8 @@
   
   <entry>
     <title>一行代码响应式</title>
-    <link href="http://example.com/2024/09/25/css/%E4%B8%80%E8%A1%8C%E4%BB%A3%E7%A0%81%E5%93%8D%E5%BA%94%E5%BC%8F/"/>
-    <id>http://example.com/2024/09/25/css/%E4%B8%80%E8%A1%8C%E4%BB%A3%E7%A0%81%E5%93%8D%E5%BA%94%E5%BC%8F/</id>
+    <link href="https://yuanmingjian.github.io/Yuanmingjian/2024/09/25/css/%E4%B8%80%E8%A1%8C%E4%BB%A3%E7%A0%81%E5%93%8D%E5%BA%94%E5%BC%8F/"/>
+    <id>https://yuanmingjian.github.io/Yuanmingjian/2024/09/25/css/%E4%B8%80%E8%A1%8C%E4%BB%A3%E7%A0%81%E5%93%8D%E5%BA%94%E5%BC%8F/</id>
     <published>2024-09-25T02:58:32.507Z</published>
     <updated>2024-09-27T07:52:36.611Z</updated>
     
@@ -79,8 +79,8 @@
   
   <entry>
     <title></title>
-    <link href="http://example.com/2024/09/25/Untitled/"/>
-    <id>http://example.com/2024/09/25/Untitled/</id>
+    <link href="https://yuanmingjian.github.io/Yuanmingjian/2024/09/25/Untitled/"/>
+    <id>https://yuanmingjian.github.io/Yuanmingjian/2024/09/25/Untitled/</id>
     <published>2024-09-25T02:58:25.176Z</published>
     <updated>2024-09-25T02:58:25.176Z</updated>
     
@@ -92,8 +92,8 @@
   
   <entry>
     <title></title>
-    <link href="http://example.com/2024/07/14/07-12/"/>
-    <id>http://example.com/2024/07/14/07-12/</id>
+    <link href="https://yuanmingjian.github.io/Yuanmingjian/2024/07/14/07-12/"/>
+    <id>https://yuanmingjian.github.io/Yuanmingjian/2024/07/14/07-12/</id>
     <published>2024-07-14T14:07:25.103Z</published>
     <updated>2024-07-14T15:15:15.794Z</updated>
     
@@ -114,8 +114,8 @@
   
   <entry>
     <title></title>
-    <link href="http://example.com/2024/05/17/%E6%96%87%E7%AB%A0/"/>
-    <id>http://example.com/2024/05/17/%E6%96%87%E7%AB%A0/</id>
+    <link href="https://yuanmingjian.github.io/Yuanmingjian/2024/05/17/%E6%96%87%E7%AB%A0/"/>
+    <id>https://yuanmingjian.github.io/Yuanmingjian/2024/05/17/%E6%96%87%E7%AB%A0/</id>
     <published>2024-05-17T11:26:41.539Z</published>
     <updated>2024-05-30T12:54:56.673Z</updated>
     
@@ -135,8 +135,8 @@
   
   <entry>
     <title>vue组件和vuex数据绑定</title>
-    <link href="http://example.com/2024/05/09/bug/vue%E7%BB%84%E4%BB%B6%E5%92%8Cvuex%E6%95%B0%E6%8D%AE%E7%BB%91%E5%AE%9A/"/>
-    <id>http://example.com/2024/05/09/bug/vue%E7%BB%84%E4%BB%B6%E5%92%8Cvuex%E6%95%B0%E6%8D%AE%E7%BB%91%E5%AE%9A/</id>
+    <link href="https://yuanmingjian.github.io/Yuanmingjian/2024/05/09/bug/vue%E7%BB%84%E4%BB%B6%E5%92%8Cvuex%E6%95%B0%E6%8D%AE%E7%BB%91%E5%AE%9A/"/>
+    <id>https://yuanmingjian.github.io/Yuanmingjian/2024/05/09/bug/vue%E7%BB%84%E4%BB%B6%E5%92%8Cvuex%E6%95%B0%E6%8D%AE%E7%BB%91%E5%AE%9A/</id>
     <published>2024-05-09T09:27:57.107Z</published>
     <updated>2024-05-09T09:32:05.770Z</updated>
     
@@ -155,8 +155,8 @@
   
   <entry>
     <title>axios请求拦截</title>
-    <link href="http://example.com/2024/04/11/axios%E6%8B%A6%E6%88%AA/"/>
-    <id>http://example.com/2024/04/11/axios%E6%8B%A6%E6%88%AA/</id>
+    <link href="https://yuanmingjian.github.io/Yuanmingjian/2024/04/11/axios%E6%8B%A6%E6%88%AA/"/>
+    <id>https://yuanmingjian.github.io/Yuanmingjian/2024/04/11/axios%E6%8B%A6%E6%88%AA/</id>
     <published>2024-04-11T08:35:57.424Z</published>
     <updated>2024-04-11T08:36:26.514Z</updated>
     
@@ -176,8 +176,8 @@
   
   <entry>
     <title>pnpm	与 npm</title>
-    <link href="http://example.com/2024/04/10/pnpm/"/>
-    <id>http://example.com/2024/04/10/pnpm/</id>
+    <link href="https://yuanmingjian.github.io/Yuanmingjian/2024/04/10/pnpm/"/>
+    <id>https://yuanmingjian.github.io/Yuanmingjian/2024/04/10/pnpm/</id>
     <published>2024-04-10T13:44:11.869Z</published>
     <updated>2024-04-10T13:58:27.949Z</updated>
     
@@ -198,8 +198,8 @@
   
   <entry>
     <title></title>
-    <link href="http://example.com/2024/04/09/%E5%AE%9A%E6%97%B6%E5%99%A8/"/>
-    <id>http://example.com/2024/04/09/%E5%AE%9A%E6%97%B6%E5%99%A8/</id>
+    <link href="https://yuanmingjian.github.io/Yuanmingjian/2024/04/09/%E5%AE%9A%E6%97%B6%E5%99%A8/"/>
+    <id>https://yuanmingjian.github.io/Yuanmingjian/2024/04/09/%E5%AE%9A%E6%97%B6%E5%99%A8/</id>
     <published>2024-04-09T09:59:06.721Z</published>
     <updated>2024-04-09T10:04:08.484Z</updated>
     
@@ -218,8 +218,8 @@
   
   <entry>
     <title>响应式原理总结</title>
-    <link href="http://example.com/2024/04/09/%E9%9D%A2%E7%BB%8F/vue%20%E9%9D%A2%E8%AF%95%E9%A2%98/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86/"/>
-    <id>http://example.com/2024/04/09/%E9%9D%A2%E7%BB%8F/vue%20%E9%9D%A2%E8%AF%95%E9%A2%98/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86/</id>
+    <link href="https://yuanmingjian.github.io/Yuanmingjian/2024/04/09/%E9%9D%A2%E7%BB%8F/vue%20%E9%9D%A2%E8%AF%95%E9%A2%98/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86/"/>
+    <id>https://yuanmingjian.github.io/Yuanmingjian/2024/04/09/%E9%9D%A2%E7%BB%8F/vue%20%E9%9D%A2%E8%AF%95%E9%A2%98/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86/</id>
     <published>2024-04-09T07:21:10.334Z</published>
     <updated>2024-11-04T13:19:48.564Z</updated>
     
@@ -238,8 +238,8 @@
   
   <entry>
     <title>vue插件</title>
-    <link href="http://example.com/2024/04/08/%E9%9D%A2%E7%BB%8F/vue%20%E9%9D%A2%E8%AF%95%E9%A2%98/vue%E6%8F%92%E4%BB%B6/"/>
-    <id>http://example.com/2024/04/08/%E9%9D%A2%E7%BB%8F/vue%20%E9%9D%A2%E8%AF%95%E9%A2%98/vue%E6%8F%92%E4%BB%B6/</id>
+    <link href="https://yuanmingjian.github.io/Yuanmingjian/2024/04/08/%E9%9D%A2%E7%BB%8F/vue%20%E9%9D%A2%E8%AF%95%E9%A2%98/vue%E6%8F%92%E4%BB%B6/"/>
+    <id>https://yuanmingjian.github.io/Yuanmingjian/2024/04/08/%E9%9D%A2%E7%BB%8F/vue%20%E9%9D%A2%E8%AF%95%E9%A2%98/vue%E6%8F%92%E4%BB%B6/</id>
     <published>2024-04-08T13:05:17.799Z</published>
     <updated>2024-04-08T13:07:14.324Z</updated>
     
@@ -258,8 +258,8 @@
   
   <entry>
     <title></title>
-    <link href="http://example.com/2024/04/08/%E9%9D%A2%E7%BB%8F/vue%20%E9%9D%A2%E8%AF%95%E9%A2%98/Untitled/"/>
-    <id>http://example.com/2024/04/08/%E9%9D%A2%E7%BB%8F/vue%20%E9%9D%A2%E8%AF%95%E9%A2%98/Untitled/</id>
+    <link href="https://yuanmingjian.github.io/Yuanmingjian/2024/04/08/%E9%9D%A2%E7%BB%8F/vue%20%E9%9D%A2%E8%AF%95%E9%A2%98/Untitled/"/>
+    <id>https://yuanmingjian.github.io/Yuanmingjian/2024/04/08/%E9%9D%A2%E7%BB%8F/vue%20%E9%9D%A2%E8%AF%95%E9%A2%98/Untitled/</id>
     <published>2024-04-08T13:05:11.864Z</published>
     <updated>2024-04-08T13:05:11.864Z</updated>
     
@@ -271,8 +271,8 @@
   
   <entry>
     <title>vuex pinia</title>
-    <link href="http://example.com/2024/04/08/vue/vuex%E5%92%8Cpinina/"/>
-    <id>http://example.com/2024/04/08/vue/vuex%E5%92%8Cpinina/</id>
+    <link href="https://yuanmingjian.github.io/Yuanmingjian/2024/04/08/vue/vuex%E5%92%8Cpinina/"/>
+    <id>https://yuanmingjian.github.io/Yuanmingjian/2024/04/08/vue/vuex%E5%92%8Cpinina/</id>
     <published>2024-04-08T08:05:28.230Z</published>
     <updated>2024-04-08T13:28:17.641Z</updated>
     
@@ -292,8 +292,8 @@
   
   <entry>
     <title>箭头函数</title>
-    <link href="http://example.com/2024/04/08/es6/%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0/"/>
-    <id>http://example.com/2024/04/08/es6/%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0/</id>
+    <link href="https://yuanmingjian.github.io/Yuanmingjian/2024/04/08/es6/%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0/"/>
+    <id>https://yuanmingjian.github.io/Yuanmingjian/2024/04/08/es6/%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0/</id>
     <published>2024-04-08T05:11:15.698Z</published>
     <updated>2024-04-08T05:32:49.909Z</updated>
     
@@ -314,8 +314,8 @@
   
   <entry>
     <title>Suspense</title>
-    <link href="http://example.com/2024/04/07/vue/Suspense/"/>
-    <id>http://example.com/2024/04/07/vue/Suspense/</id>
+    <link href="https://yuanmingjian.github.io/Yuanmingjian/2024/04/07/vue/Suspense/"/>
+    <id>https://yuanmingjian.github.io/Yuanmingjian/2024/04/07/vue/Suspense/</id>
     <published>2024-04-07T05:17:17.609Z</published>
     <updated>2024-04-07T05:16:32.569Z</updated>
     
@@ -335,8 +335,8 @@
   
   <entry>
     <title>单点登陆下-无感刷新</title>
-    <link href="http://example.com/2024/03/25/%E6%97%A0%E6%84%9F%E5%88%B7%E6%96%B0/"/>
-    <id>http://example.com/2024/03/25/%E6%97%A0%E6%84%9F%E5%88%B7%E6%96%B0/</id>
+    <link href="https://yuanmingjian.github.io/Yuanmingjian/2024/03/25/%E6%97%A0%E6%84%9F%E5%88%B7%E6%96%B0/"/>
+    <id>https://yuanmingjian.github.io/Yuanmingjian/2024/03/25/%E6%97%A0%E6%84%9F%E5%88%B7%E6%96%B0/</id>
     <published>2024-03-25T05:45:58.179Z</published>
     <updated>2024-04-09T08:19:42.981Z</updated>
     
@@ -356,8 +356,8 @@
   
   <entry>
     <title>函数传参都是值传递</title>
-    <link href="http://example.com/2024/03/24/js%E9%AB%98%E7%BA%A7/%E5%87%BD%E6%95%B0%E4%BC%A0%E5%8F%82/"/>
-    <id>http://example.com/2024/03/24/js%E9%AB%98%E7%BA%A7/%E5%87%BD%E6%95%B0%E4%BC%A0%E5%8F%82/</id>
+    <link href="https://yuanmingjian.github.io/Yuanmingjian/2024/03/24/js%E9%AB%98%E7%BA%A7/%E5%87%BD%E6%95%B0%E4%BC%A0%E5%8F%82/"/>
+    <id>https://yuanmingjian.github.io/Yuanmingjian/2024/03/24/js%E9%AB%98%E7%BA%A7/%E5%87%BD%E6%95%B0%E4%BC%A0%E5%8F%82/</id>
     <published>2024-03-24T13:44:06.863Z</published>
     <updated>2024-04-07T05:18:39.405Z</updated>
     
@@ -378,8 +378,8 @@
   
   <entry>
     <title>二次封装分页组件</title>
-    <link href="http://example.com/2024/03/19/vue/%E7%BB%84%E4%BB%B6/%E5%88%86%E9%A1%B5/"/>
-    <id>http://example.com/2024/03/19/vue/%E7%BB%84%E4%BB%B6/%E5%88%86%E9%A1%B5/</id>
+    <link href="https://yuanmingjian.github.io/Yuanmingjian/2024/03/19/vue/%E7%BB%84%E4%BB%B6/%E5%88%86%E9%A1%B5/"/>
+    <id>https://yuanmingjian.github.io/Yuanmingjian/2024/03/19/vue/%E7%BB%84%E4%BB%B6/%E5%88%86%E9%A1%B5/</id>
     <published>2024-03-19T07:57:57.908Z</published>
     <updated>2024-04-07T05:14:52.154Z</updated>
     
@@ -401,8 +401,8 @@
   
   <entry>
     <title>Service Worker和Web Worker</title>
-    <link href="http://example.com/2024/03/11/web%20worker%20%E5%92%8C%20service.worer/"/>
-    <id>http://example.com/2024/03/11/web%20worker%20%E5%92%8C%20service.worer/</id>
+    <link href="https://yuanmingjian.github.io/Yuanmingjian/2024/03/11/web%20worker%20%E5%92%8C%20service.worer/"/>
+    <id>https://yuanmingjian.github.io/Yuanmingjian/2024/03/11/web%20worker%20%E5%92%8C%20service.worer/</id>
     <published>2024-03-11T03:11:55.112Z</published>
     <updated>2024-04-07T05:10:48.450Z</updated>
     
