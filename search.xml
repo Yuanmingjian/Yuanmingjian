@@ -3,7 +3,7 @@
   
     
     <entry>
-      <title></title>
+      <title><![CDATA[react的一些钩子]]></title>
       <url>/2024/10/18/react/useReducer/</url>
       <content type="html"><![CDATA[<h2 id="useReducer"><a href="#useReducer" class="headerlink" title="useReducer"></a>useReducer</h2><p>上边我们提到过基础的状态管理钩子 useState ，在 React Hook 中额外提供了一个关于状态管理的 useReducer。</p>
 <h3 id="useReducer-用法"><a href="#useReducer-用法" class="headerlink" title="useReducer 用法"></a>useReducer 用法</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const [state, dispatch] = useReducer(reducer, initialArg, init);</span><br></pre></td></tr></table></figure>
@@ -51,9 +51,9 @@
     </entry>
     
     <entry>
-      <title></title>
+      <title><![CDATA[react的一些小记]]></title>
       <url>/2024/10/11/react/react%E7%9A%84%E5%89%AF%E4%BD%9C%E7%94%A8/</url>
-      <content type="html"><![CDATA[<p>  <img src="/../../images/image-20241011175717835.png" alt="image-20241011175717835"></p>
+      <content type="html"><![CDATA[<h3 id="副作用的理解"><a href="#副作用的理解" class="headerlink" title="副作用的理解"></a>副作用的理解</h3><p> <img src="/../../images/image-20241011175717835.png" alt="image-20241011175717835"></p>
 <p><img src="/../../images/image-20241011180049973.png" alt="image-20241011180049973"></p>
 <p>由渲染本身引起的对接组件外部的操作  —— 副作用 如 发送网络请求、定时器</p>
 ]]></content>
