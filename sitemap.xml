@@ -2,9 +2,54 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://yuanmingjian.github.io/Yuanmingjian/2024/11/09/nest/ioc%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5/</loc>
+    <loc>https://yuanmingjian.github.io/Yuanmingjian/2024/11/12/%E6%9D%82/axios%E5%92%8Cfeatch/</loc>
     
-    <lastmod>2024-11-11</lastmod>
+    <lastmod>2024-11-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yuanmingjian.github.io/Yuanmingjian/2022/10/17/js%E9%AB%98%E7%BA%A7/js%20%E6%89%A7%E8%A1%8C%E4%B8%8A%E4%B8%8B%E6%96%87/</loc>
+    
+    <lastmod>2024-11-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yuanmingjian.github.io/Yuanmingjian/2024/03/11/%E5%B7%A5%E7%A8%8B%E5%8C%96/vite/</loc>
+    
+    <lastmod>2024-11-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yuanmingjian.github.io/Yuanmingjian/2024/03/10/dll/</loc>
+    
+    <lastmod>2024-11-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yuanmingjian.github.io/Yuanmingjian/2023/07/09/websocket/</loc>
+    
+    <lastmod>2024-11-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yuanmingjian.github.io/Yuanmingjian/2024/11/11/nest/Ts%E8%A3%85%E9%A5%B0%E5%99%A8%E5%92%8C%E5%85%83%E6%95%B0%E6%8D%AE/</loc>
+    
+    <lastmod>2024-11-19</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -13,16 +58,61 @@
   <url>
     <loc>https://yuanmingjian.github.io/Yuanmingjian/2024/11/08/nest/%E5%88%9D%E5%85%A5/</loc>
     
-    <lastmod>2024-11-09</lastmod>
+    <lastmod>2024-11-14</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://yuanmingjian.github.io/Yuanmingjian/2024/11/09/%E9%87%8D%E5%AD%A6%E5%89%8D%E7%AB%AF/</loc>
+    <loc>https://yuanmingjian.github.io/Yuanmingjian/2024/11/09/nest/ioc%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5/</loc>
     
-    <lastmod>2024-11-09</lastmod>
+    <lastmod>2024-11-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yuanmingjian.github.io/Yuanmingjian/2023/09/14/bug/%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E7%9A%84%E5%8A%A8%E6%80%81%E5%AF%BC%E5%85%A5/</loc>
+    
+    <lastmod>2024-11-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yuanmingjian.github.io/Yuanmingjian/2022/10/27/%E6%9D%82/%E9%9A%8F%E7%AC%94/</loc>
+    
+    <lastmod>2024-11-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yuanmingjian.github.io/Yuanmingjian/2024/05/09/bug/vue%E7%BB%84%E4%BB%B6%E5%92%8Cvuex%E6%95%B0%E6%8D%AE%E7%BB%91%E5%AE%9A/</loc>
+    
+    <lastmod>2024-11-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yuanmingjian.github.io/Yuanmingjian/2024/11/11/%E5%B7%A5%E5%85%B7/nvm/</loc>
+    
+    <lastmod>2024-11-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yuanmingjian.github.io/Yuanmingjian/2023/10/06/es6/class%E5%92%8Cfunction%E6%9E%84%E9%80%A0%E7%B1%BB%E7%9A%84%E5%8C%BA%E5%88%AB/</loc>
+    
+    <lastmod>2024-11-11</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -31,7 +121,34 @@
   <url>
     <loc>https://yuanmingjian.github.io/Yuanmingjian/2024/09/25/css/%E4%B8%80%E8%A1%8C%E4%BB%A3%E7%A0%81%E5%93%8D%E5%BA%94%E5%BC%8F/</loc>
     
-    <lastmod>2024-11-08</lastmod>
+    <lastmod>2024-11-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yuanmingjian.github.io/Yuanmingjian/2024/10/11/react/react%E7%9A%84%E5%89%AF%E4%BD%9C%E7%94%A8/</loc>
+    
+    <lastmod>2024-11-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yuanmingjian.github.io/Yuanmingjian/2024/10/18/react/useReducer/</loc>
+    
+    <lastmod>2024-11-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yuanmingjian.github.io/Yuanmingjian/2024/11/09/%E9%87%8D%E5%AD%A6%E5%89%8D%E7%AB%AF/</loc>
+    
+    <lastmod>2024-11-11</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -47,36 +164,9 @@
   </url>
   
   <url>
-    <loc>https://yuanmingjian.github.io/Yuanmingjian/2024/10/11/react/react%E7%9A%84%E5%89%AF%E4%BD%9C%E7%94%A8/</loc>
-    
-    <lastmod>2024-11-08</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://yuanmingjian.github.io/Yuanmingjian/2024/10/18/react/useReducer/</loc>
-    
-    <lastmod>2024-11-08</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://yuanmingjian.github.io/Yuanmingjian/2024/04/09/%E9%9D%A2%E7%BB%8F/vue%20%E9%9D%A2%E8%AF%95%E9%A2%98/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86/</loc>
     
     <lastmod>2024-11-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://yuanmingjian.github.io/Yuanmingjian/2022/10/27/%E9%9A%8F%E7%AC%94/</loc>
-    
-    <lastmod>2024-10-18</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -137,15 +227,6 @@
   </url>
   
   <url>
-    <loc>https://yuanmingjian.github.io/Yuanmingjian/2024/05/09/bug/vue%E7%BB%84%E4%BB%B6%E5%92%8Cvuex%E6%95%B0%E6%8D%AE%E7%BB%91%E5%AE%9A/</loc>
-    
-    <lastmod>2024-05-09</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://yuanmingjian.github.io/Yuanmingjian/2023/07/01/vue/vue3%E5%AD%A6%E4%B9%A0/</loc>
     
     <lastmod>2024-04-14</lastmod>
@@ -176,15 +257,6 @@
     <loc>https://yuanmingjian.github.io/Yuanmingjian/2024/01/21/%E5%AF%92%E5%81%87%E7%AA%81%E5%87%BB/%E7%BC%BA%E4%B9%8F%E7%9F%A5%E8%AF%86%E7%82%B9/</loc>
     
     <lastmod>2024-04-13</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://yuanmingjian.github.io/Yuanmingjian/2023/07/09/websocket/</loc>
-    
-    <lastmod>2024-04-11</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -299,15 +371,6 @@
   </url>
   
   <url>
-    <loc>https://yuanmingjian.github.io/Yuanmingjian/2024/04/08/%E9%9D%A2%E7%BB%8F/vue%20%E9%9D%A2%E8%AF%95%E9%A2%98/Untitled/</loc>
-    
-    <lastmod>2024-04-08</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://yuanmingjian.github.io/Yuanmingjian/2023/08/06/nodejs/%E4%BA%8B%E4%BB%B6%E7%8E%AF/</loc>
     
     <lastmod>2024-04-08</lastmod>
@@ -336,6 +399,15 @@
   
   <url>
     <loc>https://yuanmingjian.github.io/Yuanmingjian/2023/07/23/webpack/</loc>
+    
+    <lastmod>2024-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yuanmingjian.github.io/Yuanmingjian/2023/07/23/%E5%B7%A5%E7%A8%8B%E5%8C%96/webpack/</loc>
     
     <lastmod>2024-04-07</lastmod>
     
@@ -498,24 +570,6 @@
   
   <url>
     <loc>https://yuanmingjian.github.io/Yuanmingjian/2024/03/11/web%20worker%20%E5%92%8C%20service.worer/</loc>
-    
-    <lastmod>2024-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://yuanmingjian.github.io/Yuanmingjian/2024/03/11/vite/</loc>
-    
-    <lastmod>2024-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://yuanmingjian.github.io/Yuanmingjian/2024/03/10/dll/</loc>
     
     <lastmod>2024-04-07</lastmod>
     
@@ -785,15 +839,6 @@
   </url>
   
   <url>
-    <loc>https://yuanmingjian.github.io/Yuanmingjian/2023/10/06/es6/class%E5%92%8Cfunction%E6%9E%84%E9%80%A0%E7%B1%BB%E7%9A%84%E5%8C%BA%E5%88%AB/</loc>
-    
-    <lastmod>2023-10-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://yuanmingjian.github.io/Yuanmingjian/2023/08/01/nodejs/%E4%B8%A4%E7%A7%8D%E5%AF%BC%E5%87%BA/</loc>
     
     <lastmod>2023-09-27</lastmod>
@@ -822,15 +867,6 @@
   
   <url>
     <loc>https://yuanmingjian.github.io/Yuanmingjian/2022/11/27/vue/%E7%BB%84%E4%BB%B6/1/</loc>
-    
-    <lastmod>2023-09-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://yuanmingjian.github.io/Yuanmingjian/2023/09/24/bug/loading%E5%8A%A0%E8%BD%BD/</loc>
     
     <lastmod>2023-09-25</lastmod>
     
@@ -885,24 +921,6 @@
   
   <url>
     <loc>https://yuanmingjian.github.io/Yuanmingjian/2023/08/31/vue/setup%E4%B8%AD%E7%9A%84defineprops/</loc>
-    
-    <lastmod>2023-09-23</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://yuanmingjian.github.io/Yuanmingjian/2023/09/14/bug/%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E7%9A%84%E5%8A%A8%E6%80%81%E5%AF%BC%E5%85%A5/</loc>
-    
-    <lastmod>2023-09-23</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://yuanmingjian.github.io/Yuanmingjian/2023/03/27/bug/%E4%B8%80%E4%BA%9B%E5%B0%8F%E9%97%AE%E9%A2%98/</loc>
     
     <lastmod>2023-09-23</lastmod>
     
@@ -1127,15 +1145,6 @@
   </url>
   
   <url>
-    <loc>https://yuanmingjian.github.io/Yuanmingjian/2022/10/17/js%E9%AB%98%E7%BA%A7/js%20%E6%89%A7%E8%A1%8C%E4%B8%8A%E4%B8%8B%E6%96%87/</loc>
-    
-    <lastmod>2023-09-23</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://yuanmingjian.github.io/Yuanmingjian/2023/01/02/js%E9%AB%98%E7%BA%A7/%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/</loc>
     
     <lastmod>2023-09-23</lastmod>
@@ -1200,24 +1209,6 @@
   
   <url>
     <loc>https://yuanmingjian.github.io/Yuanmingjian/2022/11/14/es6/es8/Object.values/</loc>
-    
-    <lastmod>2023-09-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://yuanmingjian.github.io/Yuanmingjian/2023/03/05/bug/[ERR_HTTP_HEADERS_SENT]/</loc>
-    
-    <lastmod>2023-09-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://yuanmingjian.github.io/Yuanmingjian/2023/05/09/bug/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E9%97%AE%E9%A2%98/</loc>
     
     <lastmod>2023-09-11</lastmod>
     
@@ -1489,7 +1480,7 @@
 
   <url>
     <loc>https://yuanmingjian.github.io/Yuanmingjian</loc>
-    <lastmod>2024-11-11</lastmod>
+    <lastmod>2024-11-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -1497,21 +1488,77 @@
   
   <url>
     <loc>https://yuanmingjian.github.io/Yuanmingjian/tags/es/</loc>
-    <lastmod>2024-11-11</lastmod>
+    <lastmod>2024-11-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://yuanmingjian.github.io/Yuanmingjian/tags/vue/</loc>
-    <lastmod>2024-11-11</lastmod>
+    <lastmod>2024-11-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://yuanmingjian.github.io/Yuanmingjian/tags/nest%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2024-11-11</lastmod>
+    <lastmod>2024-11-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://yuanmingjian.github.io/Yuanmingjian/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</loc>
+    <lastmod>2024-11-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://yuanmingjian.github.io/Yuanmingjian/tags/vue%E7%9A%84%E4%B8%80%E4%BA%9B%E9%81%87%E5%88%B0%E7%9A%84bug-%E9%97%AE%E9%A2%98/</loc>
+    <lastmod>2024-11-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://yuanmingjian.github.io/Yuanmingjian/tags/css%E7%9A%84%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86%E7%82%B9/</loc>
+    <lastmod>2024-11-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://yuanmingjian.github.io/Yuanmingjian/tags/nest%E5%85%A5%E9%97%A8/</loc>
+    <lastmod>2024-11-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://yuanmingjian.github.io/Yuanmingjian/tags/react%E7%9A%84%E4%B8%80%E4%BA%9B%E5%B0%8F%E8%AE%B0%EF%BC%88%E7%9F%A5%E8%AF%86%E7%82%B9%EF%BC%89/</loc>
+    <lastmod>2024-11-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://yuanmingjian.github.io/Yuanmingjian/tags/react%E7%9A%84hook%E5%87%BD%E6%95%B0/</loc>
+    <lastmod>2024-11-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://yuanmingjian.github.io/Yuanmingjian/tags/%E7%BD%91%E7%BB%9C%E7%9A%84%E4%B8%80%E4%BA%9B%E6%9D%82/</loc>
+    <lastmod>2024-11-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://yuanmingjian.github.io/Yuanmingjian/tags/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/</loc>
+    <lastmod>2024-11-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -1520,14 +1567,49 @@
   
   <url>
     <loc>https://yuanmingjian.github.io/Yuanmingjian/categories/web%E5%89%8D%E7%AB%AF/</loc>
-    <lastmod>2024-11-11</lastmod>
+    <lastmod>2024-11-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://yuanmingjian.github.io/Yuanmingjian/categories/nest%E6%A1%86%E6%9E%B6/</loc>
-    <lastmod>2024-11-11</lastmod>
+    <lastmod>2024-11-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://yuanmingjian.github.io/Yuanmingjian/categories/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</loc>
+    <lastmod>2024-11-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://yuanmingjian.github.io/Yuanmingjian/categories/bug/</loc>
+    <lastmod>2024-11-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://yuanmingjian.github.io/Yuanmingjian/categories/css/</loc>
+    <lastmod>2024-11-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://yuanmingjian.github.io/Yuanmingjian/categories/react/</loc>
+    <lastmod>2024-11-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://yuanmingjian.github.io/Yuanmingjian/categories/%E6%9D%82/</loc>
+    <lastmod>2024-11-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
