@@ -6,7 +6,7 @@
   <link href="https://yuanmingjian.github.io/Yuanmingjian/atom.xml" rel="self"/>
   
   <link href="https://yuanmingjian.github.io/Yuanmingjian/"/>
-  <updated>2024-11-08T09:15:04.997Z</updated>
+  <updated>2024-11-11T06:44:51.633Z</updated>
   <id>https://yuanmingjian.github.io/Yuanmingjian/</id>
   
   <author>
@@ -15,6 +15,72 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ioc依赖注入</title>
+    <link href="https://yuanmingjian.github.io/Yuanmingjian/2024/11/09/nest/ioc%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5/"/>
+    <id>https://yuanmingjian.github.io/Yuanmingjian/2024/11/09/nest/ioc%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5/</id>
+    <published>2024-11-09T08:39:09.680Z</published>
+    <updated>2024-11-11T06:44:51.633Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="ioc-控制反转"><a href="#ioc-控制反转" class="headerlink" title="ioc 控制反转"></a>ioc 控制反转</h3><p><strong>什么是控制反转（Inversion Of Control）</strong></p><p>控制反转是一种设计原则。顾名思义，它用于在面向对象设计中反转不同种类的控制以实现松耦合。在这里，控制是指一个类中除了完成其主要工作流程之外的其他所有流程，包括对应用程序流程的控制，以及对依赖对象创建和绑定流程的控制。</p><p><strong>什么是依赖注入（Dependency Injection）</strong></p><p>控制反转只告诉了我们需要怎么去做，但并没有告诉我们应该怎么做。所以实现控制反转的手段多种多样，其中比较流行的也是Nest、Spring等主流框架所使用的手段就是依赖注入。</p><p>依赖注入允许在类之外创建依赖对象，并通过<em><strong>不同的方式</strong></em>将这些对象提供给类。使用依赖注入的手段，我们能够将类所依赖对象的创建和绑定移动到类自身的实现之外。</p><p><em><strong>不同的方式</strong></em>包括：构造函数注入、属性注入、Setter方法注入、接口注入。</p><p><strong>我不想看概念了，能简单的说一下它们到底做了什么吗？</strong></p><p>通俗的说通过控制反转和依赖注入实现了以下功能：</p><p>如果类A需要类B，类A中并不直接控制创建类B的实例。与之相反，我们从类A外部控制类B实例的创建，类A之中只负责使用类B的实例，完全无需关心类B实例是如何创建的。</p><p><strong>参考文章</strong>：  <a href="https://juejin.cn/post/7085614364396355598">https://juejin.cn/post/7085614364396355598</a>  </p><p>最后，我们将Nest中的元素与我们自己编写的工厂进行一个类比：</p><ol><li>Provider &amp; Worker&#x2F;Machine：真正提供具体功能实现的低层类。</li><li>Controller &amp; ScrewWorkshop：调用低层类来为用户提供服务的高层类。</li><li>Nest框架本身 &amp; Factory：控制反转容器，对高层类和低层类统一管理，控制相关类的新建与注入，解藕了类之间的依赖。</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;ioc-控制反转&quot;&gt;&lt;a href=&quot;#ioc-控制反转&quot; class=&quot;headerlink&quot; title=&quot;ioc 控制反转&quot;&gt;&lt;/a&gt;ioc 控制反转&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;什么是控制反转（Inversion Of Control）&lt;/strong&gt;</summary>
+      
+    
+    
+    
+    <category term="nest框架" scheme="https://yuanmingjian.github.io/Yuanmingjian/categories/nest%E6%A1%86%E6%9E%B6/"/>
+    
+    
+    <category term="nest学习" scheme="https://yuanmingjian.github.io/Yuanmingjian/tags/nest%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>重学前端</title>
+    <link href="https://yuanmingjian.github.io/Yuanmingjian/2024/11/09/%E9%87%8D%E5%AD%A6%E5%89%8D%E7%AB%AF/"/>
+    <id>https://yuanmingjian.github.io/Yuanmingjian/2024/11/09/%E9%87%8D%E5%AD%A6%E5%89%8D%E7%AB%AF/</id>
+    <published>2024-11-09T07:12:12.990Z</published>
+    <updated>2024-11-09T08:33:15.223Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/Yuanmingjian/../images/image-20241109153545163.png" alt="image-20241109153545163"></p><p>js 按照文法、语义、运行时来拆分 </p><p>这符合编程语言的一般规律：<strong>用一定的词法和语法，表达一定语义，从而操作运行时。</strong></p><h2 id="基础数据类型"><a href="#基础数据类型" class="headerlink" title="基础数据类型"></a>基础数据类型</h2><h3 id="Object"><a href="#Object" class="headerlink" title="Object"></a>Object</h3><p>Object 是 JavaScript 中最复杂的类型，也是 JavaScript 的核心机制之一。Object 表示对象的意思，它是一切有形和无形物体的总称。</p><p>下面我们来看一看，为什么给对象添加的方法能用在基本类型上？</p><p>在 JavaScript 中，对象的定义是“属性的集合”。属性分为数据属性和访问器属性，二者都是 key-value 结构，key 可以是字符串或者 Symbol 类型。</p><h2 id="装箱机制"><a href="#装箱机制" class="headerlink" title="装箱机制"></a>装箱机制</h2><p>3和new Number（3） 一个是基础类型 一个是对象类型</p><p>我给new Number（3）的原型对象加一个方法  3这个玩意可以直接调用 这是因为调用函数的时候 自动装箱转换成对象类型（new  Number（3））并调用该原型的方法 </p><p>运算符提供了装箱操作，它会根据基础类型构造一个临时对象，使得我们能在基础类型上调用对应对象的方法。</p><p>每一类装箱对象皆有私有的 Class 属性，这些属性可以用 Object.prototype.toString 获取：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var symbolObject = Object(Symbol(&quot;a&quot;));</span><br><span class="line"> </span><br><span class="line">console.log(Object.prototype.toString.call(symbolObject)); //[object Symbol]</span><br></pre></td></tr></table></figure><p>在 JavaScript 中，没有任何方法可以更改私有的 Class 属性，因此 Object.prototype.toString 是可以准确识别对象对应的基本类型的方法，它比 instanceof 更加准确。</p><p>但需要注意的是，<strong>call 本身会产生装箱操作</strong>，所以需要配合 typeof 来区分基本类型还是对象类型。</p><p>注意：&#x3D;&#x3D;运算符会自动拆箱 将对象转换为基本类型   object函数也会自动将对象转换为基本类型</p><h2 id="JavaScript对象：面向对象还是基于对象？"><a href="#JavaScript对象：面向对象还是基于对象？" class="headerlink" title="JavaScript对象：面向对象还是基于对象？"></a>JavaScript对象：面向对象还是基于对象？</h2><p>对象有如下几个特点。</p><ul><li>对象具有唯一标识性：即使完全相同的两个对象，也并非同一个对象。</li><li>对象有状态：对象具有状态，同一对象可能处于不同状态之下。</li><li>对象具有行为：即对象的状态，可能因为它的行为产生变迁。‘</li></ul><p>js对象独有的特点具有高度动态性的属性集合</p><p>在 JavaScript 中，对象的状态和行为其实都被抽象为了属性  一个值一个方法都是对象的属性</p><p><strong>在实现了对象基本特征的基础上, 我认为，JavaScript 中对象独有的特色是：对象具有高度的动态性，这是因为 JavaScript 赋予了使用者在运行时为对象添改状态和行为的能力。</strong></p><p>我来举个例子，比如，JavaScript 允许运行时向对象添加属性，这就跟绝大多数基于类的、静态的对象设计完全不同。如果你用过 Java 或者其它别的语言，肯定会产生跟我一样的感受。</p><p>下面这段代码就展示了运行时如何向一个对象添加属性，一开始我定义了一个对象 o，定义完成之后，再添加它的属性 b，这样操作是完全没问题的。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var o = &#123; a: 1 &#125;;</span><br><span class="line">o.b = 2;</span><br><span class="line">console.log(o.a, o.b); //1 2</span><br></pre></td></tr></table></figure><p>为了提高抽象能力，JavaScript 的属性被设计成比别的语言更加复杂的形式，它提供了数据属性和访问器属性（getter&#x2F;setter）两类。</p><h4 id="JavaScript-对象的两类属性"><a href="#JavaScript-对象的两类属性" class="headerlink" title="JavaScript 对象的两类属性"></a>JavaScript 对象的两类属性</h4><p>对 JavaScript 来说，属性并非只是简单的名称和值，JavaScript 用一组特征（attribute）来描述属性（property）。</p><p>先来说第一类属性，数据属性。它比较接近于其它语言的属性概念。数据属性具有四个特征。</p><ul><li>value：就是属性的值。</li><li>writable：决定属性能否被赋值。</li><li>enumerable：决定 for in 能否枚举该属性。</li><li>configurable：决定该属性能否被删除或者改变特征值。</li></ul><p>在大多数情况下，我们只关心数据属性的值即可。</p><p>第二类属性是访问器（getter&#x2F;setter）属性，它也有四个特征。</p><ul><li>getter：函数或 undefined，在取属性值时被调用。</li><li>setter：函数或 undefined，在设置属性值时被调用。</li><li>enumerable：决定 for in 能否枚举该属性。</li><li>configurable：决定该属性能否被删除或者改变特征值。</li></ul><p>访问器属性使得属性在读和写时执行代码，它允许使用者在写和读属性时，得到完全不同的值，它可以视为一种函数的语法糖。</p><p>我们通常用于定义属性的代码会产生数据属性，其中的 writable、enumerable、configurable 都默认为 true。我们可以使用内置函数 Object.getOwnPropertyDescripter 来查看，如以下代码所示：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var o = &#123; a: 1 &#125;;</span><br><span class="line">o.b = 2;</span><br><span class="line">//a 和 b 皆为数据属性</span><br><span class="line">Object.getOwnPropertyDescriptor(o,&quot;a&quot;) // &#123;value: 1, writable: true, enumerable: true, configurable: true&#125;</span><br><span class="line">Object.getOwnPropertyDescriptor(o,&quot;b&quot;) // &#123;value: 2, writable: true, enumerable: true, configurable: true&#125;</span><br></pre></td></tr></table></figure><p>我们在这里使用了两种语法来定义属性，定义完属性后，我们用 JavaScript 的 API 来查看这个属性，我们可以发现，这样定义出来的属性都是数据属性，writeable、enumerable、configurable 都是默认值为 true。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/Yuanmingjian/../images/image-20241109153545163.png&quot; alt=&quot;image-20241109153545163&quot;&gt;&lt;/p&gt;
+&lt;p&gt;js 按照文法、语义、运行时来拆分 &lt;/p&gt;
+&lt;p&gt;这符合编程语言的一般</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://yuanmingjian.github.io/Yuanmingjian/2024/11/08/nest/%E5%88%9D%E5%85%A5/"/>
+    <id>https://yuanmingjian.github.io/Yuanmingjian/2024/11/08/nest/%E5%88%9D%E5%85%A5/</id>
+    <published>2024-11-08T12:47:24.630Z</published>
+    <updated>2024-11-09T08:39:07.296Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h4><p><a href="https://nodejs.org/">Nest 是一个用于构建高效、可扩展的Node.js</a>服务器端应用程序的框架。它使用现代 JavaScript，以<a href="https://www.typescriptlang.org/">TypeScript</a>构建（保留与纯 JavaScript 的兼容性），并结合了 OOP（面向对象编程）、FP（函数式编程）和 FRP（函数式响应式编程）的元素。</p><p>在底层，Nest 使用了<a href="https://expressjs.com/">Express ，但也提供了与</a><a href="https://github.com/fastify/fastify">Fastify</a>等多种其他库的兼容性，从而可以轻松使用大量可用的第三方插件。</p><h3 id="q1：oop、fp、frp的解释"><a href="#q1：oop、fp、frp的解释" class="headerlink" title="q1：oop、fp、frp的解释"></a>q1：oop、fp、frp的解释</h3><h3 id="OOP（面向对象编程）"><a href="#OOP（面向对象编程）" class="headerlink" title="OOP（面向对象编程）"></a>OOP（面向对象编程）</h3><p><strong>面向对象</strong>编程是一种编程范式，它将数据和处理数据的方法组织成对象。对象是类的实例，类是对象的模板。</p><p><strong>特点</strong>:</p><ul><li>抽象：通过类和对象来模拟现实世界的事物。</li><li>封装：将数据和行为打包在一起。</li><li>继承：允许新的类继承一个或多个现有类的属性和方法。</li><li>多态：允许不同类的对象通过继承同一接口使用相同的代码。</li></ul><h3 id="FP（函数式编程）"><a href="#FP（函数式编程）" class="headerlink" title="FP（函数式编程）"></a>FP（函数式编程）</h3><p><strong>函数式编程</strong>是一种编程范式，它将计算视为函数的评估，并避免使用状态和可变数据。</p><p><strong>特点</strong>:</p><ul><li>纯函数：输出只依赖于输入的函数，没有副作用。</li><li>不可变性：数据一旦创建就不会被修改。</li><li>高阶函数：可以接收其他函数作为参数或将函数作为返回值的函数。</li><li>递归：函数通过自身调用以解决复杂问题。</li></ul><p>解决以下</p><ul><li>可扩展性–我是否需要不断地重构代码来支持额外的功能？</li><li>易模块化–如果我更改了一个文件，另一个文件是否会受到影响？</li><li>可重用性–是否有很多重复的代码？</li><li>可测性–给这些函数添加单元测试是否让我纠结？</li><li>易推理性–我写的代码是否非结构化严重并难以推理？</li></ul><p>函数式编程的目的是使用函数来<strong>抽象作用在数据之上的控制流和操作</strong>，从而在系统中<strong>消除副作用</strong>并<strong>减少对状态的改变。</strong></p><h3 id="FRP（函数式响应式编程）"><a href="#FRP（函数式响应式编程）" class="headerlink" title="FRP（函数式响应式编程）"></a>FRP（函数式响应式编程）</h3><p>函数式响应式编程是函数式编程的一个分支，它强调对事件或数据流的响应。</p><p><strong>特点</strong>:</p><ul><li><p>响应式：程序可以自动响应数据流的变化。</p></li><li><p>声明式：描述应该做什么，而不是如何做。</p></li><li><p>数据流：将数据变化视为流，并可以对这些流进行操作。</p></li></ul><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>面向对象编程(OOP)通过封装变化使得代码更易理解。 函数式编程(FP)通过最小化变化使得代码更易理解。 – Michacel Feathers（Twitter）</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h4 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h4&gt;&lt;p&gt;&lt;a href=&quot;https://nodejs.org/&quot;&gt;Nest 是一个用于构建高效、可扩展的Node.js&lt;/a&gt;服务器端应用程序的框</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>react的一些钩子</title>
@@ -61,50 +127,15 @@
     <link href="https://yuanmingjian.github.io/Yuanmingjian/2024/09/25/css/%E4%B8%80%E8%A1%8C%E4%BB%A3%E7%A0%81%E5%93%8D%E5%BA%94%E5%BC%8F/"/>
     <id>https://yuanmingjian.github.io/Yuanmingjian/2024/09/25/css/%E4%B8%80%E8%A1%8C%E4%BB%A3%E7%A0%81%E5%93%8D%E5%BA%94%E5%BC%8F/</id>
     <published>2024-09-25T02:58:32.507Z</published>
-    <updated>2024-09-27T07:52:36.611Z</updated>
+    <updated>2024-11-08T12:35:39.775Z</updated>
     
-    <content type="html"><![CDATA[<p>columo count</p>]]></content>
+    <content type="html"><![CDATA[<p>columo count  新特性</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;columo count&lt;/p&gt;
+    <summary type="html">&lt;p&gt;columo count  新特性&lt;/p&gt;
 </summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="https://yuanmingjian.github.io/Yuanmingjian/2024/09/25/Untitled/"/>
-    <id>https://yuanmingjian.github.io/Yuanmingjian/2024/09/25/Untitled/</id>
-    <published>2024-09-25T02:58:25.176Z</published>
-    <updated>2024-09-25T02:58:25.176Z</updated>
-    
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="https://yuanmingjian.github.io/Yuanmingjian/2024/07/14/07-12/"/>
-    <id>https://yuanmingjian.github.io/Yuanmingjian/2024/07/14/07-12/</id>
-    <published>2024-07-14T14:07:25.103Z</published>
-    <updated>2024-07-14T15:15:15.794Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="今日内容"><a href="#今日内容" class="headerlink" title="今日内容"></a>今日内容</h2><p>1 梳理邻里圈的逻辑</p><p>2 学习webpack构建工具 去了解各种构建工具的分类、对比</p><p>3 浏览优选事业部构建工具的优化过程，一步步如何优化编译构建速度，打包体积大小等 整个过程的方案设计和思想值得我慢慢品味学习</p><p>4 刷ts练习题</p><h2 id="遇到问题及解决"><a href="#遇到问题及解决" class="headerlink" title="遇到问题及解决"></a>遇到问题及解决</h2><p>1 阅读优选构建工具的优化过程时，对于一些专业性名词和概念不清晰，对一些优化方案随曾经有过耳闻但却从未实践过，导致一些内容看起来较为困难</p><h2 id="明日安排"><a href="#明日安排" class="headerlink" title="明日安排"></a>明日安排</h2><p>1 继续刷ts练习题 熟悉ts语法</p><p>2 学习微信小程序性能优化方式</p><h2 id="感悟总结"><a href="#感悟总结" class="headerlink" title="感悟总结"></a>感悟总结</h2><p>对于构建工程化这一块是我后续要慢慢去了解学习的，目前市面上各种新鲜框架，组件库层出不穷，是不可能学得完的， 但在工程化这一块，其思想却是可以受益终生，从分析问题到调研到给出解决方案到实践落地，每一步都是一名合格的前端程序员需要去掌握的，而这些需要不断积累经验不断学习，多多接触一个项目的底层搭建过程，总结其一步步的优化过程。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;今日内容&quot;&gt;&lt;a href=&quot;#今日内容&quot; class=&quot;headerlink&quot; title=&quot;今日内容&quot;&gt;&lt;/a&gt;今日内容&lt;/h2&gt;&lt;p&gt;1 梳理邻里圈的逻辑&lt;/p&gt;
-&lt;p&gt;2 学习webpack构建工具 去了解各种构建工具的分类、对比&lt;/p&gt;
-&lt;p&gt;3 浏览优</summary>
       
     
     
@@ -392,27 +423,6 @@
 &lt;p&gt;插槽&lt;/p&gt;
 &lt;p&gt;ref&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;ht</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Service Worker和Web Worker</title>
-    <link href="https://yuanmingjian.github.io/Yuanmingjian/2024/03/11/web%20worker%20%E5%92%8C%20service.worer/"/>
-    <id>https://yuanmingjian.github.io/Yuanmingjian/2024/03/11/web%20worker%20%E5%92%8C%20service.worer/</id>
-    <published>2024-03-11T03:11:55.112Z</published>
-    <updated>2024-04-07T05:10:48.450Z</updated>
-    
-    <content type="html"><![CDATA[<p>Service Worker和Web Worker都是JavaScript中的工作线程，但它们在设计目标和使用场景上有一些显著的区别。</p><p>Web Worker主要用于执行后台任务，以避免阻塞主线程。它们运行独立的JavaScript文件，主要用于处理大量计算或执行长时间运行的任务，例如数据分析和图像处理，而不会导致页面无响应。Web Worker通过postMessage()方法向主线程发送消息，但无法访问DOM元素。</p><p>而Service Worker则是一种在浏览器中运行的脚本，用于拦截和处理网络请求、管理缓存等。Service Worker可以在网络请求到达时拦截它们，并使用缓存策略来响应用户的请求，以便在离线或网络不佳的情况下提供更好的用户体验。Service Worker还可以通过监听消息事件来接收来自其他脚本的消息，并执行相应的操作。与Web Worker不同，Service Worker具有一些额外的功能，如离线缓存和推送通知，使它们成为构建高性能、响应式Web应用的强大工具。</p><p>总结来说，Web Worker主要用于执行计算密集型任务，而Service Worker则更多地关注于网络请求的处理和缓存管理。两者都是提升Web应用性能和响应性的重要技术。</p><h3 id="Web-Worker-的通信时长"><a href="#Web-Worker-的通信时长" class="headerlink" title="Web Worker 的通信时长"></a>Web Worker 的通信时长</h3><p>并不是执行时间超过 50ms 的任务，就可以使用 Web Worker，还要先考虑<code>通信时长</code>的问题</p><p>假如一个运算执行时长为 100ms，但是通信时长为 300ms， 用了 Web Worker可能会更慢</p><p>比如新建一个 web worker, 浏览器会加载对应的 worker.js 资源，下图中的 Time 是这个资源的通信时长（也叫加载时长）</p><p><img src="/../images/3b3f1e0b00b34a35813dd06f1354ee18tplv-k3u1fbpfcp-zoom-in-crop-mark1512000.webp" alt="load.png"></p><p><strong>当任务的运算时长 - 通信时长 &gt; 50ms，推荐使用Web Worker</strong></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;Service Worker和Web Worker都是JavaScript中的工作线程，但它们在设计目标和使用场景上有一些显著的区别。&lt;/p&gt;
-&lt;p&gt;Web Worker主要用于执行后台任务，以避免阻塞主线程。它们运行独立的JavaScript文件，主要用于处理大量计算或执</summary>
       
     
     
