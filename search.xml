@@ -7,7 +7,7 @@
       <url>/2024/11/12/%E6%9D%82/axios%E5%92%8Cfeatch/</url>
       <content type="html"><![CDATA[<h3 id="fetch和-axios的书写"><a href="#fetch和-axios的书写" class="headerlink" title="fetch和 axios的书写"></a>fetch和 axios的书写</h3><p><img src="/../../images/image-20241112194707752.png" alt="image-20241112194707752"></p>
 <p><img src="/../../images/image-20241112200756387.png" alt="image-20241112200756387"></p>
-<p>1axios中默认的请求头会给我们将Content-type11自动设置成 application&#x2F;json  fetch就需要我们手动书写 不然就会导致传到后端的数据有误</p>
+<p>1axios中默认的请求头会给我们将Content-type自动设置成 application&#x2F;json  fetch就需要我们手动书写 不然就会导致传到后端的数据有误</p>
 <p>2 请求体的数据在body中需要使用 JSON.stringify（） 将我们的js对象序列化  而在axios我们不需要关心这一点 axios也为我们做好了封装</p>
 ]]></content>
       
